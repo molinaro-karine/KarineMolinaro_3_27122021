@@ -1,0 +1,21 @@
+// Header
+header {
+  position: sticky;
+  top: 0;
+  background: white;
+  height: 65px;
+  box-shadow: 0 2px 4px #818080cc;
+  display: flex;
+  justify-content: center;
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    img {
+      max-width: 25vh;
+    }
+  }
+}

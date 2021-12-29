@@ -1,0 +1,169 @@
+@import "./normalize.css";
+/*Base*/
+body {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+ul,
+a {
+  text-decoration: none;
+  color: black;
+  list-style: none;
+}
+
+h2,
+a,
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-family: "Shrikhand" sans-serif;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: white;
+  height: 65px;
+  box-shadow: 0 2px 4px #818080cc;
+  display: flex;
+  justify-content: center;
+}
+header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+header .logo img {
+  max-width: 25vh;
+}
+
+.footer-container {
+  background: #585858;
+  height: 200px;
+}
+.footer-container .footer-link {
+  margin-left: 20px;
+}
+.footer-container .footer-title {
+  color: white;
+  font-family: "Shrikhand";
+  letter-spacing: 0.05rem;
+  padding: 20px 0px 18px 0px;
+}
+.footer-container .footer-text {
+  margin: 8px 0;
+}
+.footer-container .footer-text .link {
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: "Roboto";
+}
+.footer-container .footer-text .fas {
+  font-size: 0.7rem;
+  margin-right: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.local {
+  background-color: #f6f6f6;
+}
+.local .location {
+  height: 8vh;
+  background-color: #ebe9e9;
+}
+.local .location-link {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.local .location-text {
+  margin: 0 25px;
+}
+
+.reserve {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.reserve h2 {
+  text-align: center;
+  margin: 35px 50px 0px 50px;
+}
+.reserve p {
+  width: 100%;
+  font-size: 1.1rem;
+  font-weight: normal;
+  text-align: center;
+}
+.reserve .btn-explore {
+  width: 220px;
+  height: 50px;
+  margin: 20px 0 60px 0;
+  border-radius: 30px;
+  background: linear-gradient(#ff79da, #9356dc);
+  box-shadow: 0 2px 4px #636363cc;
+  border: none;
+}
+.reserve .btn-explore a {
+  color: white;
+  font-weight: bold;
+}
+
+.select {
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.select-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 50px 0 10px 20px;
+  margin: 0;
+}
+
+.select-card {
+  display: flex;
+  align-items: center;
+  background: #f6f6f6;
+  border-radius: 20px;
+  margin: 10px 20px 10px 25px;
+  box-shadow: 2px 2px 7px #d3d3d3;
+}
+.select-card .number {
+  margin-left: -10px;
+  height: 27px;
+  width: 27px;
+  background: #9356dc;
+  border-radius: 20px;
+}
+.select-card .select-numb {
+  margin: 4px 0 0 9px;
+  font-weight: bold;
+  color: white;
+}
+.select-card .fas {
+  width: 15px;
+  height: 15px;
+  margin-left: 20px;
+}
+.select-card .select-text {
+  color: black;
+  font-weight: bold;
+  padding: 27px;
+  margin: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
