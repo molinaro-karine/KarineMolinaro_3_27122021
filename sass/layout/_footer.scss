@@ -2,25 +2,25 @@
 .footer-container {
   background: rgb(88, 88, 88);
   height: 200px;
-  .footer-link {
+  &-link {
     margin-left: 20px;
-  }
-
-  .footer-title {
-    color: $color-white;
-    font-family: $font-secondaire;
-    letter-spacing: 0.05rem;
-    padding: 20px 0px 18px 0px;
-  }
-  .footer-text {
-    margin: 8px 0;
-    .link {
+    &-title {
       color: $color-white;
-      font-weight: bold;
-      font-size: 1rem;
-      font-family: $font-principale;
+      font-family: $font-secondaire;
+      letter-spacing: 0.05rem;
+      padding: 20px 0px 18px 0px;
     }
-    .fas {
+  }
+}
+.footer-text {
+  margin: 8px 0;
+  &.link {
+    color: $color-white;
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: $font-principale;
+
+    &.fas {
       font-size: 0.7rem;
       margin-right: 8px;
     }

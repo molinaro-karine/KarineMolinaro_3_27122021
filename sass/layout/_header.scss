@@ -8,13 +8,13 @@ header {
   display: flex;
   justify-content: center;
 
-  .logo {
+  &.logo {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 
-    img {
+    &img {
       max-width: 25vh;
     }
   }
