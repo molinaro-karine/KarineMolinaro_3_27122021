@@ -7,8 +7,9 @@ header {
   box-shadow: 0 2px 4px #818080cc;
   display: flex;
   justify-content: center;
+  align-items: center;
 
-  &.logo {
+  &__logo {
     display: flex;
     justify-content: center;
     align-items: center;

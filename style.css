@@ -1,10 +1,4 @@
-@import "./normalize.css";
 /*Base*/
-body {
-  box-sizing: border-box;
-  font-size: 16px;
-}
-
 ul,
 a {
   text-decoration: none;
@@ -15,11 +9,11 @@ a {
 h2,
 a,
 p {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto";
 }
 
 h1 {
-  font-family: "Shrikhand" sans-serif;
+  font-family: "Shrikhand";
 }
 
 header {
@@ -30,14 +24,15 @@ header {
   box-shadow: 0 2px 4px #818080cc;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
-header .logo {
+header__logo {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
-header .logo img {
+header__logoimg {
   max-width: 25vh;
 }
 
@@ -45,41 +40,39 @@ header .logo img {
   background: #585858;
   height: 200px;
 }
-.footer-container .footer-link {
+.footer-container-link {
   margin-left: 20px;
 }
-.footer-container .footer-title {
+.footer-container-link-title {
   color: white;
   font-family: "Shrikhand";
   letter-spacing: 0.05rem;
   padding: 20px 0px 18px 0px;
 }
-.footer-container .footer-text {
+
+.footer-text {
   margin: 8px 0;
 }
-.footer-container .footer-text .link {
+.footer-text.link {
   color: white;
   font-weight: bold;
   font-size: 1rem;
   font-family: "Roboto";
 }
-.footer-container .footer-text .fas {
+.footer-text.link.fas {
   font-size: 0.7rem;
   margin-right: 8px;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 .local {
   background-color: #f6f6f6;
 }
-.local .location {
+
+.location {
   height: 8vh;
   background-color: #ebe9e9;
 }
-.local .location-link {
+.location__link {
   height: 50px;
   display: flex;
   justify-content: center;
@@ -87,7 +80,7 @@ header .logo img {
   font-weight: bold;
   font-size: 1rem;
 }
-.local .location-text {
+.location .location-text {
   margin: 0 25px;
 }
 
@@ -96,18 +89,19 @@ header .logo img {
   flex-direction: column;
   align-items: center;
 }
-.reserve h2 {
+.reserve__title {
   text-align: center;
   margin: 35px 50px 0px 50px;
 }
-.reserve p {
+.reserve__desc {
   width: 100%;
   font-size: 1.1rem;
   font-weight: normal;
   text-align: center;
 }
-.reserve .btn-explore {
-  width: 220px;
+
+.btn-explore {
+  width: 60%;
   height: 50px;
   margin: 20px 0 60px 0;
   border-radius: 30px;
@@ -115,9 +109,13 @@ header .logo img {
   box-shadow: 0 2px 4px #636363cc;
   border: none;
 }
-.reserve .btn-explore a {
+.btn-explore a {
   color: white;
   font-weight: bold;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .select {
@@ -126,7 +124,6 @@ header .logo img {
   flex-direction: column;
   justify-content: space-around;
 }
-
 .select-title {
   font-weight: bold;
   font-size: 1.5rem;
