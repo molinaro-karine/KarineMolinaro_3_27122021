@@ -1,16 +1,4 @@
-/*Base*/
+// Polices personnalisées
 
-ul,
-a {
-  text-decoration: none;
-  color: black;
-  list-style: none;
-}
-h2,
-a,
-p {
-  font-family: $font-principale;
-}
-h1 {
-  font-family: $font-secondaire;
-}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
