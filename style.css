@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-
 .btn-explore {
   width: 60%;
   height: 50px;
@@ -31,44 +30,55 @@ header {
   align-items: center;
   position: relative;
 }
-.header__logo img {
+.header__logoimg {
   max-width: 25vh;
 }
 
 footer.main_footer {
-  background: rgb(88, 88, 88);
+  background: #585858;
   height: 200px;
 }
+
 .footer__container {
   margin-left: 20px;
 }
-.footer__title {
+h4.footer__title {
   color: white;
   font-family: "Shrikhand";
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.06rem;
+  margin: 0;
   padding: 20px 0px 18px 0px;
 }
+
 .footer__text {
   margin: 8px 0;
 }
-.footer__link {
+.footer__text .fas {
+  font-size: 0.7rem;
+  margin-left: 8px;
+}
+.footer__text .footer {
   color: white;
   font-weight: bold;
   font-size: 1rem;
   font-family: "Roboto";
 }
-.footer__linklight {
+i.fas.fa-utensils,
+i.fas.fa-hands-helping {
+  margin-right: 10px;
+}
+a.footer__link {
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}
+a.footer__linklight {
   color: white;
   font-weight: normal;
   font-size: 1rem;
+  margin-left: 10px;
 }
-i {
-  margin-right: 10px;
-}
-i.fa,
-.fas {
-  font-size: 0.7rem;
-}
+
 .local {
   background-color: #f6f6f6;
 }

@@ -1,12 +1,10 @@
 // footer
-footer.main_footer {
+.main_footer {
   background: rgb(88, 88, 88);
   height: 200px;
-}
-
-.footer__container {
-  margin-left: 20px;
-
+  &__container {
+    margin-left: 20px;
+  }
   &__title {
     color: $color-white;
     font-family: $font-secondary;
@@ -14,25 +12,17 @@ footer.main_footer {
     margin: 0;
     padding: 20px 0px 18px 0px;
   }
-}
-
-.footer__text {
-  margin: 8px 0;
-  .fas {
-    font-size: 0.7rem;
-    margin-left: 8px;
+  &__text {
+    margin: 8px 0;
+    .fas {
+      font-size: 0.7rem;
+      margin-left: 8px;
+    }
   }
-
-  .footer {
-    color: $color-white;
-    font-weight: $weight-title;
-    font-size: $size-subtitle;
-    font-family: $font-principale;
-  }
-  &____link {
+  &__link {
     @include link-texte($color: white, $size: 1rem);
   }
-  &____linklight {
+  &__linklight {
     @include link-texte($color: white, $weight: $weight-soubtitle, $size: 1rem);
   }
 }
