@@ -3,7 +3,34 @@
   $weight: $weight-title,
   $size: $size-subtitle
 ) {
+  text-decoration: none;
   color: $color;
   font-weight: $weight;
+  font-size: $size;
+}
+//cards restaurants
+@mixin newcard {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  background: $color-tertiary;
+  border-radius: 2px;
+  &text {
+    display: block;
+    font-size: 0.9rem;
+    text-align: center;
+    color: darken($color-tertiary, 40%);
+    padding: 8px;
+  }
+}
+@mixin title {
+  margin: 15px 0px 5px 15px;
+  font-weight: $weight-title;
+  font-size: $size-subtitle;
+}
+
+@mixin sous-title($size: $size-subtitle) {
+  margin: 0px 0px 0px 15px;
+  font-weight: $weight-subtitle;
   font-size: $size;
 }

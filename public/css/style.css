@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+.btn-explore {
+  width: 60%;
+  height: 50px;
+  margin: 20px 0 60px 0;
+  border-radius: 30px;
+  background: linear-gradient(#ff79da, #9356dc);
+  box-shadow: 0 2px 4px #636363cc;
+  border: none;
+}
+.btn-explore__title {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.header-logo {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: white;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px #818080cc;
+}
+.header-logo__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.header-logo img {
+  max-width: 25vh;
+}
+
+.local {
+  background-color: #f6f6f6;
+}
+
+.location {
+  height: 8vh;
+  background-color: #ebe9e9;
+}
+.location__link {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.location__linki {
+  font-size: larger;
+}
+.location__text {
+  margin: 0 25px;
+}
+
+.reserve {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.reserve__title {
+  text-align: center;
+  margin: 35px 50px 0px 50px;
+}
+.reserve__desc {
+  font-size: 1.1rem;
+  font-weight: normal;
+  text-align: center;
+  margin: 20px;
+}
+
+.select {
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.select__title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 50px 0 10px 20px;
+  margin: 0;
+}
+.select__card {
+  display: flex;
+  align-items: center;
+  background: #f6f6f6;
+  border-radius: 20px;
+  margin: 10px 20px 10px 25px;
+  box-shadow: 2px 2px 7px #d3d3d3;
+}
+.select__card:hover {
+  background: #e4d5f6;
+  transition: 0.5s linear;
+}
+.select__card:hover .fas {
+  color: #9356dc;
+  transition: 0.5s linear;
+}
+.select .number {
+  margin-left: -10px;
+  height: 27px;
+  width: 27px;
+  background: #9356dc;
+  border-radius: 20px;
+}
+.select__numb {
+  margin: 4px 0 0 9px;
+  font-weight: bold;
+  color: white;
+}
+.select .fas {
+  width: 15px;
+  height: 15px;
+  margin-left: 20px;
+  color: #818080cc;
+}
+.select__text {
+  color: black;
+  font-weight: bold;
+  padding: 27px;
+  margin: 0;
+}
+
+.restaurants {
+  background-color: #f6f6f6;
+}
+.restaurants__container {
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.restaurants__title {
+  margin: 15px 0px 5px 15px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.restaurant {
+  position: relative;
+  background: white;
+  height: 250px;
+  border-radius: 20px;
+  margin: 20px;
+  box-shadow: 2px 2px 7px #d3d3d3;
+}
+.restaurant__link {
+  text-decoration: none;
+  color: black;
+}
+.restaurant__card {
+  overflow: hidden;
+  height: 70%;
+}
+.restaurant__img {
+  border-radius: 20px 20px 0px 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.restaurant__new {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  background: #99e2d0;
+  border-radius: 2px;
+}
+.restaurant__newtext {
+  display: block;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #278870;
+  padding: 8px;
+}
+.restaurant__city {
+  margin: 0px 0px 0px 15px;
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+.footer-main {
+  background: #585858;
+  height: 200px;
+}
+
+.footer__container {
+  margin-left: 20px;
+}
+.footer__container__title {
+  color: white;
+  font-family: "Shrikhand";
+  letter-spacing: 0.05rem;
+  margin: 0;
+  padding: 20px 0px 18px 0px;
+}
+
+.footer__text {
+  margin: 8px 0;
+}
+.footer__text .fas {
+  font-size: 0.7rem;
+}
+.footer__text__link {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.footer__text__linkregular {
+  text-decoration: none;
+  color: white;
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+body {
+  font-family: "Roboto";
+  margin: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul,
+a {
+  text-decoration: none;
+  list-style: none;
+}
+
+h2,
+a,
+p {
+  font-family: "Roboto";
+}
+
+h1,
+.footer__title {
+  font-family: "Shrikhand";
+}
+
+/*# sourceMappingURL=style.css.map */

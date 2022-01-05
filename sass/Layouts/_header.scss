@@ -1,22 +1,23 @@
 // Header
-header {
+.header-logo {
   position: sticky;
   top: 0;
-  background: white;
+  z-index: 2;
+  background: $color-white;
   height: 65px;
-  box-shadow: $shadow;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: $shadow;
 
   &__logo {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+  }
 
-    &img {
-      max-width: 25vh;
-    }
+  img {
+    max-width: 25vh;
   }
 }

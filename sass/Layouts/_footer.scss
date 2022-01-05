@@ -1,10 +1,11 @@
-// footer
-footer {
+//FOOTER
+.footer-main {
   background: rgb(88, 88, 88);
   height: 200px;
-  &__container {
-    margin-left: 20px;
-  }
+}
+.footer__container {
+  margin-left: 20px;
+
   &__title {
     color: $color-white;
     font-family: $font-secondary;
@@ -12,17 +13,21 @@ footer {
     margin: 0;
     padding: 20px 0px 18px 0px;
   }
-  &__text {
-    margin: 8px 0;
-    .fas {
-      font-size: 0.7rem;
-      margin-left: 8px;
-    }
+}
+.footer__text {
+  margin: 8px 0;
+  .fas {
+    font-size: 0.7rem;
   }
+
   &__link {
-    @include link-texte($color: white, $size: 1rem);
+    @include link-texte($color: $color-white, $size: 1rem);
   }
-  &__linklight {
-    @include link-texte($color: white, $weight: $weight-subtitle, $size: 1rem);
+  &__linkregular {
+    @include link-texte(
+      $color: $color-white,
+      $weight: $weight-subtitle,
+      $size: 1rem
+    );
   }
 }
