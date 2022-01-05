@@ -1,7 +1,7 @@
 @mixin link-texte(
   $color: black,
   $weight: $weight-title,
-  $size: $size-soubtitle
+  $size: $size-subtitle
 ) {
   color: $color;
   font-weight: $weight;

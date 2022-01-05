@@ -1,5 +1,5 @@
 // footer
-.main_footer {
+footer {
   background: rgb(88, 88, 88);
   height: 200px;
   &__container {
@@ -23,6 +23,6 @@
     @include link-texte($color: white, $size: 1rem);
   }
   &__linklight {
-    @include link-texte($color: white, $weight: $weight-soubtitle, $size: 1rem);
+    @include link-texte($color: white, $weight: $weight-subtitle, $size: 1rem);
   }
 }

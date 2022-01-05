@@ -6,8 +6,10 @@
   background: $gradient-btn;
   box-shadow: 0 2px 4px #636363cc;
   border: none;
-  a {
+
+  &__title {
     color: $color-white;
     font-weight: $weight-title;
+    text-align: center;
   }
 }

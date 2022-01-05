@@ -9,9 +9,10 @@
   box-shadow: 0 2px 4px #636363cc;
   border: none;
 }
-.btn-explore a {
+.btn-explore__title {
   color: white;
   font-weight: bold;
+  text-align: center;
 }
 
 header {
@@ -24,61 +25,43 @@ header {
   justify-content: center;
   align-items: center;
 }
-.header__logo {
+header__logo {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
-.header__logoimg {
+header__logoimg {
   max-width: 25vh;
 }
 
-footer.main_footer {
-  background: #585858;
+/*footer {
+  background: rgb(88, 88, 88);
   height: 200px;
-}
-
-.footer__container {
-  margin-left: 20px;
-}
-h4.footer__title {
-  color: white;
-  font-family: "Shrikhand";
-  letter-spacing: 0.06rem;
-  margin: 0;
-  padding: 20px 0px 18px 0px;
-}
-
-.footer__text {
-  margin: 8px 0;
-}
-.footer__text .fas {
-  font-size: 0.7rem;
-  margin-left: 8px;
-}
-.footer__text .footer {
-  color: white;
-  font-weight: bold;
-  font-size: 1rem;
-  font-family: "Roboto";
-}
-i.fas.fa-utensils,
-i.fas.fa-hands-helping {
-  margin-right: 10px;
-}
-a.footer__link {
-  color: white;
-  font-weight: bold;
-  font-size: 1rem;
-}
-a.footer__linklight {
-  color: white;
-  font-weight: normal;
-  font-size: 1rem;
-  margin-left: 10px;
-}
-
+  &__container {
+    margin-left: 20px;
+  }
+  &__title {
+    color: $color-white;
+    font-family: $font-secondary;
+    letter-spacing: 0.05rem;
+    margin: 0;
+    padding: 20px 0px 18px 0px;
+  }
+  &__text {
+    margin: 8px 0;
+    .fas {
+      font-size: 0.7rem;
+      margin-left: 8px;
+    }
+  }
+  &__link {
+    @include link-texte($color: white, $size: 1rem);
+  }
+  &__linklight {
+    @include link-texte($color: white, $weight: $weight-subtitle, $size: 1rem);
+  }
+}*/
 .local {
   background-color: #f6f6f6;
 }
@@ -94,6 +77,9 @@ a.footer__linklight {
   align-items: center;
   font-weight: bold;
   font-size: 1rem;
+}
+.location__linki {
+  font-size: larger;
 }
 .location .location-text {
   margin: 0 25px;
@@ -193,8 +179,6 @@ article {
 */
 body {
   font-family: "Roboto";
-  width: 100%;
-  margin: auto;
 }
 
 * {

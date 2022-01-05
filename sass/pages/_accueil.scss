@@ -12,7 +12,11 @@
     align-items: center;
     font-weight: $weight-title;
     font-size: 1rem;
+    &i {
+      font-size: larger;
+    }
   }
+
   .location-text {
     margin: 0 25px;
   }
@@ -29,7 +33,7 @@
 
   .reserve__desc {
     font-size: 1.1rem;
-    font-weight: $weight-soubtitle;
+    font-weight: $weight-subtitle;
     text-align: center;
     margin: 20px;
   }
