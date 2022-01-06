@@ -103,9 +103,6 @@
     flex-direction: column;
     justify-content: space-around;
   }
-  &__title {
-    @include title;
-  }
 }
 .restaurant {
   position: relative;
@@ -128,8 +125,17 @@
     height: 100%;
     object-fit: cover;
   }
+  .far {
+    font-size: 1.5rem;
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+  }
   &__new {
     @include newcard;
+  }
+  &__title {
+    @include title;
   }
 
   &__city {

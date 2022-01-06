@@ -20,6 +20,12 @@ a {
   text-decoration: none;
   list-style: none;
 }
+h3 {
+  text-transform: uppercase;
+  font-size: $size-subtitle;
+  font-weight: $weight-subtitle;
+  margin: 15px;
+}
 h2,
 a,
 p {
