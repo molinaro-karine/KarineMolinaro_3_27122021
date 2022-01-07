@@ -1,13 +1,14 @@
 .footer-container {
   background: darken($color-header, 30%);
   height: 200px;
+  padding-top: 8px;
 
   &__title {
     color: white;
     font-family: $font-secondary;
     letter-spacing: 0.04rem;
     margin: 0;
-    padding: 20px 0 0 2px;
+    padding: 0 2px;
     margin: 15px;
     font-weight: 500;
   }
