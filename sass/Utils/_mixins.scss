@@ -1,3 +1,9 @@
+@mixin desktop {
+  @media screen and (min-width: map-get($breakpoints,desktop)) {
+    @content;
+  }
+}
+
 @mixin link-text($color: black, $weight: $weight-title, $size: $size-subtitle) {
   text-decoration: none;
   color: $color;

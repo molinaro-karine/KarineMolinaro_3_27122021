@@ -103,6 +103,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    @include desktop {
+      flex-direction: row;
+      flex-wrap: wrap-reverse;
+    }
   }
   &__title {
     margin: 10px 0 0 22px;
@@ -116,6 +120,9 @@
   border-radius: 20px;
   margin: 20px;
   box-shadow: $shadow-light;
+  @include desktop {
+    width: 40%;
+  }
   &__link {
     text-decoration: none;
     color: black;

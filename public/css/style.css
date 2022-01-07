@@ -185,6 +185,12 @@
   flex-direction: column;
   justify-content: space-around;
 }
+@media screen and (min-width: 768px) {
+  .restaurants__container {
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+  }
+}
 .restaurants__title {
   margin: 10px 0 0 22px;
 }
@@ -196,6 +202,11 @@
   border-radius: 20px;
   margin: 20px;
   box-shadow: 2px 2px 7px #d3d3d3;
+}
+@media screen and (min-width: 768px) {
+  .restaurant {
+    width: 40%;
+  }
 }
 .restaurant__link {
   text-decoration: none;
