@@ -3,8 +3,8 @@
 @import "./utils/mixins";
 @import "./compenents/btn";
 @import "./layouts/header";
-@import "./pages/accueil";
 @import "./layouts/footer";
+@import "./pages/accueil";
 
 //GENERAL
 body {
@@ -26,12 +26,13 @@ h3 {
   font-weight: $weight-subtitle;
   margin: 15px;
 }
+h1,
 h2,
 a,
 p {
   font-family: $font-principale;
 }
-h1,
+
 .footer__title {
   font-family: $font-secondary;
 }

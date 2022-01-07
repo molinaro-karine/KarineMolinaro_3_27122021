@@ -10,7 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    @include link-texte;
+    @include link-text;
     &i {
       font-size: larger;
     }
@@ -96,6 +96,7 @@
 //SECTION RESTAURANT
 .restaurants {
   background-color: $color-grey;
+  padding-top: 20px;
 
   &__container {
     padding-bottom: 50px;
@@ -103,7 +104,11 @@
     flex-direction: column;
     justify-content: space-around;
   }
+  &__title {
+    margin: 10px 0 0 22px;
+  }
 }
+
 .restaurant {
   position: relative;
   background: $color-white;

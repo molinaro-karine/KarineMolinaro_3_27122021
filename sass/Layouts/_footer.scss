@@ -1,33 +1,27 @@
-//FOOTER
-.footer-main {
-  background: rgb(88, 88, 88);
+.footer-container {
+  background: darken($color-header, 30%);
   height: 200px;
-}
-.footer__container {
-  margin-left: 20px;
 
   &__title {
-    color: $color-white;
+    color: white;
     font-family: $font-secondary;
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.04rem;
     margin: 0;
-    padding: 20px 0px 18px 0px;
+    padding: 20px 0 0 2px;
+    margin: 15px;
+    font-weight: 500;
   }
-}
-.footer__text {
-  margin: 8px 0;
-  .fas {
-    font-size: 0.7rem;
+  &__text {
+    margin: 10px 5px 0 15px;
+    .fas {
+      font-size: 0.7rem;
+      margin-right: 8px;
+    }
   }
-
   &__link {
-    @include link-texte($color: $color-white, $size: 1rem);
+    @include link-text($color: white, $size: 1rem);
   }
   &__linkregular {
-    @include link-texte(
-      $color: $color-white,
-      $weight: $weight-subtitle,
-      $size: 1rem
-    );
+    @include link-text($color: white, $weight: $weight-subtitle, $size: 1rem);
   }
 }
