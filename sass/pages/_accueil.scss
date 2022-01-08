@@ -103,10 +103,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    //BREAKPOINTS
+    //BREAKPOINT
     @include respond(medium and large) {
       flex-direction: row;
-      flex-wrap: wrap-reverse;
+      flex-wrap: wrap;
     }
   }
   &__title {
@@ -148,7 +148,9 @@
     right: 25px;
     bottom: 25px;
   }
-
+  &__new {
+    @include newcard;
+  }
   &__title {
     @include title;
   }

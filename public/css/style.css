@@ -188,7 +188,7 @@
 @media (max-width: 2000px) {
   .restaurants__container {
     flex-direction: row;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
   }
 }
 .restaurants__title {
@@ -232,6 +232,20 @@
   position: absolute;
   right: 25px;
   bottom: 25px;
+}
+.restaurant__new {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  background: #99e2d0;
+  border-radius: 2px;
+}
+.restaurant__newtext {
+  display: block;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #278870;
+  padding: 8px;
 }
 .restaurant__title {
   margin: 15px 0px 5px 15px;
