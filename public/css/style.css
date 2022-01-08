@@ -185,7 +185,7 @@
   flex-direction: column;
   justify-content: space-around;
 }
-@media screen and (min-width: 768px) {
+@media (max-width: 2000px) {
   .restaurants__container {
     flex-direction: row;
     flex-wrap: wrap-reverse;
@@ -203,9 +203,14 @@
   margin: 20px;
   box-shadow: 2px 2px 7px #d3d3d3;
 }
-@media screen and (min-width: 768px) {
+@media (max-width: 2000px) {
   .restaurant {
     width: 40%;
+  }
+}
+@media (max-width: 2000px) and (max-width: 768px) {
+  .restaurant {
+    width: 100%;
   }
 }
 .restaurant__link {
