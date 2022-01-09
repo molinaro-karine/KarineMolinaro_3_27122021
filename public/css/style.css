@@ -1,18 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-.btn-explore {
+.reserve__btn {
   width: 60%;
   height: 50px;
   margin: 20px 0 60px 0;
   border-radius: 30px;
   background: linear-gradient(#ff79da, #9356dc);
-  box-shadow: 0 2px 4px #636363cc;
+  box-shadow: 0 4px 4px #818080cc;
   border: none;
 }
-.btn-explore__title {
+.reserve__btn__button {
   color: white;
   font-weight: bold;
   text-align: center;
+}
+.reserve__btn:hover {
+  background: #c9abee;
+  box-shadow: 4px 2px 7px #555252;
 }
 
 .header-logo {
@@ -24,7 +28,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 2px 4px #818080cc;
+  box-shadow: 0 4px 4px #818080cc;
 }
 .header-logo__logo {
   display: flex;
@@ -63,6 +67,7 @@
 }
 .footer-container__text {
   margin: 10px 5px 0 15px;
+  display: flex;
 }
 .footer-container__text .fas {
   font-size: 0.7rem;
@@ -98,9 +103,6 @@
   color: black;
   font-weight: bold;
   font-size: 1rem;
-}
-.location__linki {
-  font-size: larger;
 }
 .location__text {
   margin: 0 25px;
@@ -143,7 +145,7 @@
   box-shadow: 2px 2px 7px #d3d3d3;
 }
 .select__card:hover {
-  background: #e4d5f6;
+  background: #f2eafb;
   transition: 0.5s linear;
 }
 .select__card:hover .fas {

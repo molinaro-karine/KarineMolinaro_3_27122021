@@ -6,20 +6,22 @@ $color-tertiary: #99e2d0;
 $color-white: white;
 $color-grey: #f6f6f6;
 $color-header: #818080cc;
-$color-shadow-light: #d3d3d3;
+$color-shadow-btn: #555252;
+$color-shadow-select: #d3d3d3;
 $color-black: rgb(7, 7, 7);
 
 //GRADIENTS
 $gradient-btn: linear-gradient($color-secondary, $color-primary);
-$gradient-hover: linear-gradient($color-primary, lighten($color-primary, 10));
+$gradient-hover: lighten(#9356dc, 20%);
 
 // FONTS
 $font-principale: "Roboto";
 $font-secondary: "Shrikhand";
 
 //SHADOWS
-$shadow-light: 2px 2px 7px $color-shadow-light;
-$shadow: 0 2px 4px $color-header;
+$shadow-light: 4px 2px 7px $color-shadow-btn;
+$shadow: 0 4px 4px $color-header;
+$shadow-select: 2px 2px 7px $color-shadow-select;
 
 //SIZES FONTS AND WEIGHTS
 $size-title: 1.5rem;
