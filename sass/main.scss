@@ -5,6 +5,7 @@
 @import "./layouts/header";
 @import "./layouts/footer";
 @import "./pages/accueil";
+@import "./pages/menu";
 
 //GENERAL
 body {
@@ -20,12 +21,7 @@ a {
   text-decoration: none;
   list-style: none;
 }
-h3 {
-  text-transform: uppercase;
-  font-size: $size-subtitle;
-  font-weight: $weight-subtitle;
-  margin: 15px;
-}
+
 h1,
 h2,
 a,

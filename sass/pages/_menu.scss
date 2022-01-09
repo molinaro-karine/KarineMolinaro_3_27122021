@@ -1,0 +1,44 @@
+.menu__restaurant {
+  position: relative;
+  background-color: $color-grey;
+  border-radius: 45px 45px 0px 0px;
+  margin-top: -70px;
+  padding-bottom: 10px;
+  &__title {
+    font-family: $font-secondary;
+    font-size: 1.75rem;
+    margin: 20px;
+    padding-top: 20px;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+  &__heart {
+    font-size: 1.5rem;
+    position: absolute;
+    right: 25px;
+    top: 30px;
+    opacity: 1;
+  }
+}
+.menu {
+  margin: 15px;
+  background: $color-white;
+  height: 70px;
+  border-radius: 20px;
+  box-shadow: $shadow-select;
+  position: relative;
+  overflow: hidden;
+  &__text {
+    text-transform: uppercase;
+    font-size: $size-subtitle;
+    font-weight: $weight-subtitle;
+    margin: 10px 15px;
+  }
+  &__meal {
+    margin: 10px 15px;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+}
