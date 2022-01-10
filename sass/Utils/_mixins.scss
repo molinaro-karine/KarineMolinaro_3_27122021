@@ -1,22 +1,19 @@
 //BREAKPOINTS
-@mixin respond($breakpoint) {
-  @if $breakpoint == medium {
-    @media (max-width: 1024px) {
-      @content;
-    }
-  }
-  @if $breakpoint == small {
-    @media (max-width: 768px) {
-      @content;
-    }
-  }
-  @if $breakpoint == large {
-    @media (max-width: 2000px) {
-      @content;
-    }
+@mixin tablet {
+  @media screen and (max-width: map-get($breakpoints, tablet)) {
+    @content;
   }
 }
-
+@mixin desktop {
+  @media screen and (max-width: map-get($breakpoints, desktop)) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    @content;
+  }
+}
 @mixin link-text($color: black, $weight: $weight-title, $size: $size-subtitle) {
   text-decoration: none;
   color: $color;

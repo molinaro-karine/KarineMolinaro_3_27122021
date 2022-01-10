@@ -1,34 +1,8 @@
-@import "./utils/variables";
 @import "./base/base";
+@import "./utils/variables";
 @import "./utils/mixins";
 @import "./compenents/btn";
 @import "./layouts/header";
 @import "./layouts/footer";
 @import "./pages/accueil";
 @import "./pages/menu";
-
-//GENERAL
-body {
-  font-family: $font-principale;
-  margin: auto;
-}
-
-* {
-  box-sizing: border-box;
-}
-ul,
-a {
-  text-decoration: none;
-  list-style: none;
-}
-
-h1,
-h2,
-a,
-p {
-  font-family: $font-principale;
-}
-
-.footer__title {
-  font-family: $font-secondary;
-}

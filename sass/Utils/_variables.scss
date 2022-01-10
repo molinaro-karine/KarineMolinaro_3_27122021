@@ -12,7 +12,7 @@ $color-black: rgb(7, 7, 7);
 
 //GRADIENTS
 $gradient-btn: linear-gradient($color-secondary, $color-primary);
-$gradient-hover: lighten(#9356dc, 20%);
+$gradient-hover: lighten($color-primary, 20%);
 
 // FONTS
 $font-principale: "Roboto";
@@ -30,3 +30,8 @@ $weight-title: bold;
 $weight-subtitle: normal;
 
 //BREAKPOINTS
+$breakpoints: (
+  mobile: 768px,
+  tablet: 992px,
+  desktop: 2000px,
+);
