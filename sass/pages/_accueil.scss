@@ -100,7 +100,7 @@
     flex-direction: column;
     justify-content: space-around;
     //BREAKPOINT
-    @include desktop {
+    @include mediamaxwidth(2000px) {
       flex-direction: row;
       flex-wrap: wrap;
     }
@@ -117,12 +117,12 @@
   border-radius: 20px;
   margin: 20px;
   box-shadow: $shadow-select;
-  //BREAKPOINTS
-  @include desktop {
+  @include mediamaxwidth(2000px) {
     width: 40%;
-    @include mobile {
-      width: 100%;
-    }
+  }
+  //BREAKPOINTS
+  @include mediamaxwidth(668px) {
+    width: 100%;
   }
   &__link {
     text-decoration: none;
