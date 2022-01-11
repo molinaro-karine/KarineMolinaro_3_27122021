@@ -634,15 +634,13 @@ template {
   font-size: 1.75rem;
   margin: 20px;
   padding-top: 20px;
+  margin-bottom: 30px;
 }
-.menu__restaurant__title {
-  margin-bottom: 15px;
-}
-.menu__restaurant__heart {
+.menu__restaurant .far {
   font-size: 1.5rem;
   position: absolute;
   right: 25px;
-  top: 30px;
+  top: 25px;
   opacity: 1;
 }
 
@@ -659,12 +657,23 @@ template {
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: normal;
-  margin: 10px 15px;
+  margin: 10px 25px;
+  border-bottom: 3px solid #99e2d0;
+  width: 40px;
+  height: 30px;
 }
 .menu__meal {
   margin: 10px 15px;
   font-weight: bold;
   font-size: 1rem;
+}
+.menu__more {
+  margin: 0px 0px 0px 15px;
+  font-weight: normal;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /*# sourceMappingURL=style.css.map */
