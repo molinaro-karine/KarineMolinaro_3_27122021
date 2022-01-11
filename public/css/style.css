@@ -624,12 +624,11 @@ template {
 }
 
 .menu__restaurant {
+  position: relative;
   background-color: #f6f6f6;
   border-radius: 45px 45px 0px 0px;
+  margin-top: -70px;
   padding-bottom: 10px;
-  top: 40%;
-  position: absolute;
-  width: 100%;
 }
 .menu__restaurant__title {
   font-family: "Shrikhand";
@@ -642,7 +641,7 @@ template {
   font-size: 1.5rem;
   position: absolute;
   right: 25px;
-  top: 45px;
+  top: 25px;
   opacity: 1;
 }
 
