@@ -25,6 +25,7 @@
   &__title {
     text-align: center;
     margin: 35px 50px 0px 50px;
+    font-size: $size-title;
   }
 
   &__desc {
@@ -32,6 +33,7 @@
     font-weight: $weight-subtitle;
     text-align: center;
     margin: 20px;
+    font-weight: 300;
   }
 }
 
@@ -83,7 +85,7 @@
     color: $color-header;
   }
   &__text {
-    color: black;
+    color: $color-black;
     font-weight: $weight-title;
     padding: 27px;
     margin: 0;

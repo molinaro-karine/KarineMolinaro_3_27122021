@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 body {
   font-family: "roboto";
@@ -19,11 +19,11 @@ h1,
 h2,
 a,
 p {
-  font-family: "roboto";
+  font-family: "roboto", sans-serif;
 }
 
 .footer__title {
-  font-family: "Shrikhand";
+  font-family: "Shrikhand", sans-serif;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -372,7 +372,6 @@ template {
   border-radius: 30px;
   background: linear-gradient(#ff79da, #9356dc);
   box-shadow: 0 4px 4px #818080cc;
-  border: none;
 }
 .reserve__btn__button {
   color: white;
@@ -480,12 +479,14 @@ template {
 .reserve__title {
   text-align: center;
   margin: 35px 50px 0px 50px;
+  font-size: 1.5rem;
 }
 .reserve__desc {
   font-size: 1.1rem;
   font-weight: normal;
   text-align: center;
   margin: 20px;
+  font-weight: 300;
 }
 
 .select {
@@ -533,7 +534,7 @@ template {
   color: #818080cc;
 }
 .select__text {
-  color: black;
+  color: #070707;
   font-weight: bold;
   padding: 27px;
   margin: 0;
@@ -623,11 +624,12 @@ template {
 }
 
 .menu__restaurant {
-  position: relative;
   background-color: #f6f6f6;
   border-radius: 45px 45px 0px 0px;
-  margin-top: -70px;
   padding-bottom: 10px;
+  top: 40%;
+  position: absolute;
+  width: 100%;
 }
 .menu__restaurant__title {
   font-family: "Shrikhand";
@@ -640,7 +642,7 @@ template {
   font-size: 1.5rem;
   position: absolute;
   right: 25px;
-  top: 25px;
+  top: 45px;
   opacity: 1;
 }
 
@@ -668,7 +670,7 @@ template {
   font-size: 1rem;
 }
 .menu__more {
-  margin: 0px 0px 0px 15px;
+  margin-left: 15px;
   font-weight: normal;
   font-size: 0.85rem;
   white-space: nowrap;

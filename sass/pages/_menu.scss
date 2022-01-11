@@ -1,9 +1,11 @@
 .menu__restaurant {
-  position: relative;
-  background-color: $color-grey;
+  background-color: #f6f6f6;
   border-radius: 45px 45px 0px 0px;
-  margin-top: -70px;
   padding-bottom: 10px;
+  top: 40%;
+  position: absolute;
+  width: 100%;
+
   &__title {
     font-family: $font-secondary;
     font-size: 1.75rem;
@@ -15,7 +17,7 @@
     font-size: 1.5rem;
     position: absolute;
     right: 25px;
-    top: 25px;
+    top: 45px;
     opacity: 1;
   }
 }
@@ -42,8 +44,8 @@
     font-size: 1rem;
   }
   &__more {
-    margin: 0px 0px 0px 15px;
-    font-weight: normal;
+    margin-left: 15px;
+    font-weight: $weight-subtitle;
     font-size: 0.85rem;
     white-space: nowrap;
     overflow: hidden;
