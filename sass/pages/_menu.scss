@@ -1,3 +1,7 @@
+.menu-header {
+  height: 320px;
+}
+
 .menu__restaurant {
   position: relative;
   background-color: $color-grey;
@@ -9,46 +13,66 @@
     font-family: $font-secondary;
     font-size: 1.75rem;
     margin: 20px;
-    padding-top: 20px;
+    padding-top: 30px;
     margin-bottom: 30px;
   }
-  .far {
+  .far.fa-heart {
     font-size: 1.5rem;
     position: absolute;
     right: 25px;
-    top: 25px;
+    top: 30px;
     opacity: 1;
   }
 }
+.menu__bloc {
+  display: flex;
+  flex-direction: column;
+}
 .menu {
-  margin: 15px;
+  margin: 10px;
   background: $color-white;
   height: 70px;
   border-radius: 20px;
   box-shadow: $shadow-select;
   position: relative;
-  overflow: hidden;
 
   &__text {
     text-transform: uppercase;
     font-size: $size-subtitle;
     font-weight: $weight-subtitle;
-    margin: 10px 25px;
+    margin: 35px 0px 8px 20px;
     border-bottom: 3px solid $color-tertiary;
     width: 40px;
     height: 30px;
   }
   &__meal {
-    margin: 10px 15px;
+    margin: 15px 15px 0 15px;
     font-weight: bold;
     font-size: 1rem;
   }
+  &__subtitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
   &__more {
-    margin-left: 15px;
+    margin: 10px 5px 15px 15px;
     font-weight: $weight-subtitle;
-    font-size: 0.85rem;
+    font-size: $size-subtitle;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  }
+  &__price {
+    margin: 0;
+    font-weight: bold;
+    padding-left: 10px;
+    width: 50px;
+  }
+  &__check {
+    position: absolute;
+    background-color: $color-tertiary;
+    top: 0;
+    bottom: 0;
+    right: 0;
   }
 }

@@ -417,6 +417,7 @@ template {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  height: 320px;
 }
 
 .footer-container {
@@ -479,6 +480,7 @@ template {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 40px;
 }
 .reserve__title {
   text-align: center;
@@ -498,6 +500,15 @@ template {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  display: flex;
+  /* @include mediamaxwidth(768px) {
+    width: 100%;
+  }
+  /*@include mediamaxwidth(2000px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }*/
 }
 .select__title {
   font-weight: bold;
@@ -512,7 +523,7 @@ template {
   background: #f6f6f6;
   border-radius: 20px;
   margin: 10px 20px 10px 25px;
-  box-shadow: 2px 2px 7px #d3d3d3;
+  box-shadow: 2px 2px 7px #cac7c7;
 }
 .select__card:hover {
   background: #f2eafb;
@@ -570,7 +581,7 @@ template {
   height: 250px;
   border-radius: 20px;
   margin: 20px;
-  box-shadow: 2px 2px 7px #d3d3d3;
+  box-shadow: 2px 2px 7px #cac7c7;
 }
 @media screen and (max-width: 2000px) {
   .restaurant {
@@ -627,6 +638,10 @@ template {
   font-size: 1rem;
 }
 
+.menu-header {
+  height: 320px;
+}
+
 .menu__restaurant {
   position: relative;
   background-color: #f6f6f6;
@@ -638,47 +653,67 @@ template {
   font-family: "Shrikhand";
   font-size: 1.75rem;
   margin: 20px;
-  padding-top: 20px;
+  padding-top: 30px;
   margin-bottom: 30px;
 }
-.menu__restaurant .far {
+.menu__restaurant .far.fa-heart {
   font-size: 1.5rem;
   position: absolute;
   right: 25px;
-  top: 25px;
+  top: 30px;
   opacity: 1;
 }
 
+.menu__bloc {
+  display: flex;
+  flex-direction: column;
+}
+
 .menu {
-  margin: 15px;
+  margin: 10px;
   background: white;
   height: 70px;
   border-radius: 20px;
-  box-shadow: 2px 2px 7px #d3d3d3;
+  box-shadow: 2px 2px 7px #cac7c7;
   position: relative;
-  overflow: hidden;
 }
 .menu__text {
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: normal;
-  margin: 10px 25px;
+  margin: 35px 0px 8px 20px;
   border-bottom: 3px solid #99e2d0;
   width: 40px;
   height: 30px;
 }
 .menu__meal {
-  margin: 10px 15px;
+  margin: 15px 15px 0 15px;
   font-weight: bold;
   font-size: 1rem;
 }
+.menu__subtitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
 .menu__more {
-  margin-left: 15px;
+  margin: 10px 5px 15px 15px;
   font-weight: normal;
-  font-size: 0.85rem;
+  font-size: 1rem;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+}
+.menu__price {
+  margin: 0;
+  font-weight: bold;
+  padding-left: 10px;
+  width: 50px;
+}
+.menu__check {
+  position: absolute;
+  background-color: #99e2d0;
+  top: 0;
+  bottom: 0;
+  right: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
