@@ -368,15 +368,19 @@ template {
 .reserve__btn {
   height: 50px;
   width: 220px;
-  margin: 20px 0 60px 0;
+  margin: 30px auto;
   border-radius: 30px;
   background: linear-gradient(#ff79da, #9356dc);
   box-shadow: 0 4px 4px #818080cc;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
 }
 .reserve__btn__button {
   color: white;
   font-weight: bold;
   text-align: center;
+  padding-top: 15px;
 }
 .reserve__btn:hover {
   background: #c9abee;

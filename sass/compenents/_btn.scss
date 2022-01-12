@@ -1,14 +1,19 @@
 .reserve__btn {
   height: 50px;
   width: 220px;
-  margin: 20px 0 60px 0;
+  margin: 30px auto;
   border-radius: 30px;
   background: $gradient-btn;
   box-shadow: $shadow;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+
   &__button {
     color: $color-white;
     font-weight: $weight-title;
     text-align: center;
+    padding-top: 15px;
   }
   &:hover {
     background: $gradient-hover;
