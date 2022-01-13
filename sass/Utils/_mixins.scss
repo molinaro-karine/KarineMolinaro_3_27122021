@@ -1,6 +1,22 @@
 //BREAKPOINTS
-@mixin mediamaxwidth($max) {
+/*@mixin mediamaxwidth($max) {
   @media screen and (max-width: $max) {
+    @content;
+  }
+}*/
+@mixin desktop {
+  @media screen and (max-width: map-get($breakpoints, desktop)) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: map-get($breakpoints, tablet)) {
     @content;
   }
 }

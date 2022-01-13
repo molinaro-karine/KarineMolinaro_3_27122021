@@ -44,7 +44,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  display: flex;
   /* @include mediamaxwidth(768px) {
     width: 100%;
   }
@@ -53,7 +52,13 @@
     flex-wrap: wrap;
     align-items: baseline;
   }*/
-
+  @include desktop {
+    flex-direction: row;
+    align-items: baseline;
+  }
+  @include mobile {
+    flex-direction: column;
+  }
   &__title {
     font-weight: $weight-title;
     font-size: $size-title;
@@ -68,6 +73,15 @@
     border-radius: 20px;
     margin: 10px 20px 10px 25px;
     box-shadow: $shadow-select;
+    @include mobile {
+      width: 88%;
+    }
+    @include tablet {
+      flex-wrap: nowrap;
+      height: 80px;
+      width: 300px;
+      font-size: 14px;
+    }
     &:hover {
       background: lighten($color-primary, 35%);
 
@@ -112,7 +126,11 @@
     flex-direction: column;
     justify-content: space-around;
     //BREAKPOINT
-    @include mediamaxwidth(2000px) {
+    /*@include mediamaxwidth(2000px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }*/
+    @include desktop {
       flex-direction: row;
       flex-wrap: wrap;
     }
@@ -129,11 +147,17 @@
   border-radius: 20px;
   margin: 20px;
   box-shadow: $shadow-select;
-  @include mediamaxwidth(2000px) {
+  /*@include mediamaxwidth(2000px) {
     width: 40%;
   }
   //BREAKPOINTS
   @include mediamaxwidth(668px) {
+    width: 100%;
+  }*/
+  @include desktop {
+    width: 40%;
+  }
+  @include mobile {
     width: 100%;
   }
   &__link {
