@@ -1,22 +1,33 @@
 .reserve__btn {
+  display: block;
   height: 50px;
   width: 220px;
   margin: 30px auto;
   border-radius: 30px;
   background: $gradient-btn;
   box-shadow: $shadow;
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
+  position: relative;
+  color: $color-white;
+  border: none;
+  z-index: 1;
 
-  &__button {
-    color: $color-white;
-    font-weight: $weight-title;
-    text-align: center;
-    padding-top: 15px;
-  }
   &:hover {
-    background: $gradient-hover;
+    &::after {
+      opacity: 1;
+    }
+  }
+  &::after {
+    content: "";
+    border-radius: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: lighten($gradient-hover, 0.5);
     box-shadow: $shadow-light;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 250ms;
   }
 }

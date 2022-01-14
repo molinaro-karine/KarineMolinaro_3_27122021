@@ -16,16 +16,17 @@
     align-items: center;
     position: relative;
   }
-
-  img {
+  &__arrow {
+    position: absolute;
+    left: 20px;
+    color: $color-black;
+  }
+  &__img {
     max-width: 25vh;
   }
 }
 //MENU HEADER
-.header-logo__arrow {
-  position: absolute;
-  left: 20px;
-}
+
 .menu-header__img {
   height: 100%;
   width: 100%;

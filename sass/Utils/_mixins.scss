@@ -1,9 +1,4 @@
 //BREAKPOINTS
-/*@mixin mediamaxwidth($max) {
-  @media screen and (max-width: $max) {
-    @content;
-  }
-}*/
 @mixin desktop {
   @media screen and (max-width: map-get($breakpoints, desktop)) {
     @content;
