@@ -1,20 +1,31 @@
 //BREAKPOINTS
-@mixin desktop {
-  @media screen and (max-width: map-get($breakpoints, desktop)) {
-    @content;
+@mixin respond($breakpoint) {
+  @if $breakpoint==desktop {
+    @media only screen and (max-width: 1440px) {
+      @content;
+    }
+  }
+  @if $breakpoint==tablet {
+    @media only screen and (max-width: 992px) {
+      @content;
+    }
+  }
+  @if $breakpoint==mobile {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
   }
 }
-@mixin mobile {
-  @media screen and (max-width: map-get($breakpoints, mobile)) {
-    @content;
-  }
+//pseudoelement
+@mixin pseudo {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
-@mixin tablet {
-  @media screen and (max-width: map-get($breakpoints, tablet)) {
-    @content;
-  }
-}
 @mixin link-text($color: black, $weight: $weight-title, $size: $size-subtitle) {
   text-decoration: none;
   color: $color;
@@ -34,6 +45,7 @@
     text-align: center;
     color: darken($color-tertiary, 40%);
     padding: 8px;
+    font-weight: 500;
   }
 }
 @mixin title {
@@ -46,4 +58,10 @@
   margin: 0px 0px 0px 15px;
   font-weight: $weight-subtitle;
   font-size: $size;
+}
+@mixin heart($bottom: 25px) {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 25px;
+  bottom: $bottom;
 }

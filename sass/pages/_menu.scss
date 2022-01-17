@@ -7,14 +7,35 @@
   background-color: $color-grey;
   border-radius: 45px 45px 0px 0px;
   margin-top: -70px;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
 
   &__title {
     font-family: $font-secondary;
+    font-weight: $weight-subtitle;
     font-size: 1.75rem;
     margin: 20px;
     padding-top: 30px;
     margin-bottom: 30px;
+  }
+  .restaurant__heart:hover {
+    .fas.fa-heart {
+      opacity: 1;
+      transition: 0.3s ease-in-out;
+    }
+    .far.fa-heart {
+      opacity: 0;
+      transition: 0.3s ease-in-out;
+    }
+  }
+  .fas.fa-heart {
+    font-size: 1.5rem;
+    position: absolute;
+    right: 25px;
+    background: $gradient-btn;
+    -webkit-background-clip: text;
+    color: transparent;
+    top: 30px;
+    opacity: 0;
   }
   .far.fa-heart {
     font-size: 1.5rem;
@@ -27,14 +48,18 @@
 .menu__bloc {
   display: flex;
   flex-direction: column;
+  padding-bottom: 25px;
 
-  @include desktop {
+  @include respond(desktop) {
     display: flex;
     flex-direction: row;
   }
-  @include mobile {
-    flex-direction: column;
-    width: 95%;
+
+  @include respond(tablet) {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    // responsive code for tablet viewport i.e. 600px
   }
 }
 .menu {
@@ -44,11 +69,15 @@
   border-radius: 20px;
   box-shadow: $shadow-select;
   position: relative;
-  @include mobile {
-    width: 90%;
-  }
-  @include desktop {
+
+  @include respond(desktop) {
     width: 100%;
+  }
+  @include respond(tablet) {
+    width: 28%;
+  }
+  @include respond(mobile) {
+    width: 98%;
   }
 
   &__text {
@@ -76,18 +105,36 @@
     font-weight: $weight-subtitle;
     font-size: $size-subtitle;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   &__price {
     margin: 0;
     font-weight: bold;
     padding-left: 10px;
     width: 50px;
+    overflow: hidden;
+    width: 100%;
+    transform-origin: left 50%;
+    transition-duration: 0.5s;
   }
   &__check {
     position: absolute;
-    background-color: $color-tertiary;
     top: 0;
     bottom: 0;
     right: 0;
+    background-color: #99e2d0;
+    border-radius: 0 10px 10px 0;
+  }
+  &__check:hover {
+    width: 60px;
+  }
+  &far {
+    position: absolute;
+    left: 20px;
+    top: 25px;
+    font-size: 1.5rem;
+    color: white;
+    opacity: 1;
   }
 }

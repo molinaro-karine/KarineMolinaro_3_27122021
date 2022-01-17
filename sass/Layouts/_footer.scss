@@ -1,5 +1,5 @@
 .footer-container {
-  background: darken($color-header, 30%);
+  background: $color-footer;
   height: 200px;
   padding-top: 8px;
 
@@ -8,21 +8,21 @@
     font-family: $font-secondary;
     letter-spacing: 0.04rem;
     margin: 0;
-    padding: 0 2px;
+    padding: 0 8px;
     margin: 15px;
     font-weight: 500;
   }
   &__text {
-    margin: 10px 5px 0 15px;
+    margin: 10px 5px 0 25px;
     .fas {
       font-size: 0.7rem;
       margin-right: 8px;
     }
   }
   &__link {
-    @include link-text($color: white, $size: 1rem);
+    @include link-text($color: white, $weight: $weight-subtitle, $size: 1rem);
   }
   &__linkregular {
-    @include link-text($color: white, $weight: $weight-subtitle, $size: 1rem);
+    @include link-text($color: white, $weight: $weight-thin, $size: 1rem);
   }
 }

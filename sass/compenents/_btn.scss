@@ -2,7 +2,7 @@
   display: block;
   height: 50px;
   width: 220px;
-  margin: 30px auto;
+  margin: 10px auto;
   border-radius: 30px;
   background: $gradient-btn;
   box-shadow: $shadow;
@@ -17,13 +17,8 @@
     }
   }
   &::after {
-    content: "";
+    @include pseudo;
     border-radius: 30px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
     background-color: lighten($gradient-hover, 0.5);
     box-shadow: $shadow-light;
     opacity: 0;

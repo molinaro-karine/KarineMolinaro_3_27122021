@@ -9,7 +9,7 @@ $color-header: #aca8a8cc;
 $color-shadow-btn: #555252;
 $color-shadow-select: #cac7c7;
 $color-black: rgb(7, 7, 7);
-$color-footer: #4b4a4a;
+$color-footer: #353535;
 
 //GRADIENTS
 $gradient-btn: linear-gradient($color-secondary, $color-primary);
@@ -25,14 +25,10 @@ $shadow: 0 2px 6px $color-header;
 $shadow-select: 2px 2px 7px $color-shadow-select;
 
 //SIZES FONTS AND WEIGHTS
+$weight-thin: 300;
 $size-title: 1.5rem;
 $size-subtitle: 1rem;
 $weight-title: bold;
 $weight-subtitle: normal;
 
 //BREAKPOINTS
-$breakpoints: (
-  desktop: 1440px,
-  mobile: 768px,
-  tablet: 992,
-);
