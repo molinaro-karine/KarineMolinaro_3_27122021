@@ -547,6 +547,7 @@ template {
   color: #9356dc;
 }
 .select .number {
+  position: relative;
   margin-left: -10px;
   height: 27px;
   width: 27px;
@@ -554,7 +555,7 @@ template {
   border-radius: 20px;
 }
 .select__numb {
-  margin: 6px 0 0 9px;
+  margin: 4px 8px 0 9px;
   color: white;
 }
 .select .fas {

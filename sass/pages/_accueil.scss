@@ -81,6 +81,7 @@
   }
 
   .number {
+    position: relative;
     margin-left: -10px;
     height: 27px;
     width: 27px;
@@ -88,8 +89,8 @@
     border-radius: 20px;
   }
   &__numb {
-    margin: 6px 0 0 9px;
-    color: $color-white;
+    margin: 4px 8px 0 9px;
+    color: white;
   }
   .fas {
     width: 10px;
