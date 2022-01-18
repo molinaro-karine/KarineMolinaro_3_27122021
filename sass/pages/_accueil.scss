@@ -51,6 +51,7 @@
   }
   @include respond(mobile) {
     flex-direction: column;
+    align-items: center;
   }
   &__title {
     font-weight: $weight-title;
@@ -68,6 +69,9 @@
     box-shadow: $shadow-select;
 
     @include respond(mobile) {
+      width: 88%;
+    }
+    @include respond(desktop) {
       width: 88%;
     }
 
@@ -99,10 +103,13 @@
   }
   &__text {
     color: $color-black;
-    font-weight: $weight-title;
     padding: 27px;
     margin: 0;
     font-weight: 500;
+
+    @include respond(desktop) {
+      margin-left: 10px;
+    }
   }
 }
 //SECTION RESTAURANT
@@ -186,5 +193,51 @@
 
   &__city {
     @include sous-title;
+  }
+}
+//loader
+
+.loader {
+  background: $gradient-btn;
+  height: 100%;
+  width: 100%;
+  line-height: 500px;
+  text-align: center;
+  font-size: $size-title;
+  color: $color-white;
+  font-weight: $weight-title;
+
+  &__spin {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    border-radius: 50px;
+    border: 6px solid #ebe9e9;
+  }
+
+  &__spin::after {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    bottom: -6px;
+    right: -6px;
+    border-radius: 50px;
+    border: 6px solid transparent;
+    border-top-color: #9356dc;
+    border-bottom-color: #99e2d0;
+    border-left-color: #ff79da;
+    border-right-color: #ff79da;
+    animation: spiner 1s linear 3;
+  }
+  @keyframes spiner {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 }

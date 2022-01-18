@@ -518,6 +518,7 @@ template {
 @media only screen and (max-width: 768px) {
   .select {
     flex-direction: column;
+    align-items: center;
   }
 }
 .select__title {
@@ -536,6 +537,11 @@ template {
   box-shadow: 2px 2px 7px #cac7c7;
 }
 @media only screen and (max-width: 768px) {
+  .select__card {
+    width: 88%;
+  }
+}
+@media only screen and (max-width: 1440px) {
   .select__card {
     width: 88%;
   }
@@ -565,10 +571,14 @@ template {
 }
 .select__text {
   color: #070707;
-  font-weight: bold;
   padding: 27px;
   margin: 0;
   font-weight: 500;
+}
+@media only screen and (max-width: 1440px) {
+  .select__text {
+    margin-left: 10px;
+  }
 }
 
 .restaurants {
@@ -673,6 +683,49 @@ template {
   margin: 0px 0px 0px 15px;
   font-weight: normal;
   font-size: 1rem;
+}
+
+.loader {
+  background: linear-gradient(#ff79da, #9356dc);
+  height: 100%;
+  width: 100%;
+  line-height: 500px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+}
+.loader__spin {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  border-radius: 50px;
+  border: 6px solid #ebe9e9;
+}
+.loader__spin::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  bottom: -6px;
+  right: -6px;
+  border-radius: 50px;
+  border: 6px solid transparent;
+  border-top-color: #9356dc;
+  border-bottom-color: #99e2d0;
+  border-left-color: #ff79da;
+  border-right-color: #ff79da;
+  animation: spiner 1s linear 3;
+}
+@keyframes spiner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .menu-header {
@@ -795,20 +848,23 @@ template {
   padding-left: 10px;
   width: 50px;
   overflow: hidden;
-  width: 100%;
+}
+.menu__price__price:hover {
   transform-origin: left 50%;
   transition-duration: 0.5s;
+  width: 100%;
 }
 .menu__check {
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
-  background-color: #99e2d0;
   border-radius: 0 10px 10px 0;
 }
 .menu__check:hover {
   width: 60px;
+  transition: width 10s;
+  background-color: #99e2d0;
 }
 .menufar {
   position: absolute;
