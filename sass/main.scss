@@ -1,8 +1,10 @@
 @import "./base/base";
 @import "./normalize/normalize";
 @import "./utils/variables";
+@import "./layouts/loader";
 @import "./utils/mixins";
 @import "./compenents/btn";
+
 @import "./layouts/header";
 @import "./layouts/footer";
 @import "./pages/accueil";

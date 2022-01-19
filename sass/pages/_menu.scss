@@ -1,3 +1,4 @@
+//Section menu-restaurant
 .menu-header {
   height: 320px;
 }
@@ -45,6 +46,7 @@
     opacity: 1;
   }
 }
+//Section menu article
 .menu__bloc {
   display: flex;
   flex-direction: column;
@@ -59,7 +61,6 @@
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
-    // responsive code for tablet viewport i.e. 600px
   }
 }
 .menu {
@@ -120,11 +121,6 @@
     padding-left: 10px;
     width: 50px;
     overflow: hidden;
-    transition: transform 330ms ease-in-out;
-
-    &:hover {
-      margin-left: 60px;
-    }
   }
 
   &__check {
@@ -134,12 +130,7 @@
     left: 0;
     border-radius: 0 10px 10px 0;
   }
-  &__check:hover {
-    background-color: rgb(96, 172, 238);
-    width: 60px;
-    height: 60px;
-    transition: width 10s;
-  }
+
   &far {
     position: absolute;
     left: 20px;
