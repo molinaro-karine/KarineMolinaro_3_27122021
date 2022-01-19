@@ -686,6 +686,11 @@ template {
 }
 
 .loader {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(#ff79da, #9356dc);
   height: 100%;
   width: 100%;
@@ -694,6 +699,13 @@ template {
   font-size: 1.5rem;
   color: white;
   font-weight: bold;
+  position: fixed;
+  z-index: 4;
+  animation: off;
+  animation-duration: 3s;
+  transition: opacity 3s ease-in-out;
+  animation-delay: 1.75s;
+  animation-fill-mode: both;
 }
 .loader__spin {
   width: 50px;
@@ -703,6 +715,8 @@ template {
   position: relative;
   border-radius: 50px;
   border: 6px solid #ebe9e9;
+  margin: 15px;
+  letter-spacing: 2px;
 }
 .loader__spin::after {
   content: "";
@@ -717,7 +731,7 @@ template {
   border-bottom-color: #99e2d0;
   border-left-color: #ff79da;
   border-right-color: #ff79da;
-  animation: spiner 1s linear 3;
+  animation: spiner 1s linear infinite;
 }
 @keyframes spiner {
   0% {
@@ -728,6 +742,16 @@ template {
   }
 }
 
+@keyframes off {
+  from {
+    opacity: 90%;
+  }
+  to {
+    display: none;
+    opacity: 0%;
+    z-index: -1;
+  }
+}
 .menu-header {
   height: 320px;
 }
@@ -833,6 +857,11 @@ template {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  cursor: pointer;
+  /* position: relative;
+  overflow: hidden;*/
+  /*transition-property: transform;
+  transition-duration: 1000ms;*/
 }
 .menu__more {
   margin: 10px 5px 15px 15px;
@@ -843,28 +872,29 @@ template {
   text-overflow: ellipsis;
 }
 .menu__price {
+  display: block;
   margin: 0;
   font-weight: bold;
   padding-left: 10px;
   width: 50px;
   overflow: hidden;
+  transition: transform 330ms ease-in-out;
 }
-.menu__price__price:hover {
-  transform-origin: left 50%;
-  transition-duration: 0.5s;
-  width: 100%;
+.menu__price:hover {
+  margin-left: 60px;
 }
 .menu__check {
-  position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
+  left: 0;
   border-radius: 0 10px 10px 0;
 }
 .menu__check:hover {
+  background-color: #60acee;
   width: 60px;
+  height: 60px;
   transition: width 10s;
-  background-color: #99e2d0;
 }
 .menufar {
   position: absolute;

@@ -198,6 +198,11 @@
 //loader
 
 .loader {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
   background: $gradient-btn;
   height: 100%;
   width: 100%;
@@ -206,6 +211,13 @@
   font-size: $size-title;
   color: $color-white;
   font-weight: $weight-title;
+  position: fixed;
+  z-index: 4;
+  animation: off;
+  animation-duration: 3s;
+  transition: opacity 3s ease-in-out;
+  animation-delay: 1.75s;
+  animation-fill-mode: both;
 
   &__spin {
     width: 50px;
@@ -215,6 +227,8 @@
     position: relative;
     border-radius: 50px;
     border: 6px solid #ebe9e9;
+    margin: 15px;
+    letter-spacing: 2px;
   }
 
   &__spin::after {
@@ -230,7 +244,7 @@
     border-bottom-color: #99e2d0;
     border-left-color: #ff79da;
     border-right-color: #ff79da;
-    animation: spiner 1s linear 3;
+    animation: spiner 1s linear infinite;
   }
   @keyframes spiner {
     0% {
@@ -239,5 +253,15 @@
     100% {
       transform: rotate(360deg);
     }
+  }
+}
+@keyframes off {
+  from {
+    opacity: 90%;
+  }
+  to {
+    display: none;
+    opacity: 0%;
+    z-index: -1;
   }
 }
