@@ -122,21 +122,38 @@
     width: 50px;
     overflow: hidden;
   }
-
-  &__check {
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    border-radius: 0 10px 10px 0;
+  &__price:hover {
+    animation: check 1s linear 1s 1 normal none;
   }
 
-  &far {
+  .far {
     position: absolute;
-    left: 20px;
+    left: 35px;
     top: 25px;
     font-size: 1.5rem;
     color: white;
     opacity: 1;
+  }
+  &__check {
+    width: 23%;
+    height: 70px;
+    border-radius: 0 10px 10px 0;
+    position: absolute;
+    overflow: hidden;
+    top: 0px;
+    left: 360px;
+    @include respond(mobile) {
+      width: 23%;
+    }
+  }
+
+  &__check {
+    border-radius: 0 10px 10px 0;
+    overflow: hidden;
+  }
+
+  .menu__check:hover {
+    background-color: $color-tertiary;
+    animation: check 1s linear 1s 1 normal none;
   }
 }
