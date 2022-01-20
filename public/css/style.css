@@ -610,6 +610,7 @@ template {
 }
 .select__card:hover {
   background: #f2eafb;
+  transition: background-color 1s;
 }
 .select__card:hover .fas {
   color: #9356dc;
@@ -706,8 +707,8 @@ template {
 .restaurant .fas.fa-heart {
   font-size: 1.5rem;
   position: absolute;
-  right: 25px;
-  bottom: 25px;
+  right: 27px;
+  bottom: 32px;
   background: linear-gradient(#ff79da, #9356dc);
   background-clip: text;
   -webkit-background-clip: text;
@@ -717,8 +718,8 @@ template {
 .restaurant .far.fa-heart {
   font-size: 1.5rem;
   position: absolute;
-  right: 25px;
-  bottom: 25px;
+  right: 27px;
+  bottom: 32px;
   opacity: 1;
 }
 .restaurant__new {
@@ -818,10 +819,18 @@ template {
   border-radius: 20px;
   box-shadow: 2px 2px 7px #cac7c7;
   position: relative;
-  animation: menu 1s ease 0s 1 normal both;
+  overflow: hidden;
 }
-.menu .menu:hover ~ .menu__subtitle > .menu__check {
-  display: block;
+.menu:hover .menu__price {
+  transform: translateX(-80px);
+}
+.menu:hover .menu__check {
+  transform: translatex(0px);
+  transition: 0.5s ease-in-out;
+}
+.menu:hover .far.fa-check-circle {
+  transform: rotate(360deg);
+  transition: rotate 0.5s ease-in-out;
 }
 @media only screen and (max-width: 1440px) {
   .menu {
@@ -855,8 +864,10 @@ template {
 .menu__subtitle {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  cursor: pointer;
+  overflow: hidden;
+  width: 100%;
+  transform-origin: left 50%;
+  transition-duration: 0.5s;
 }
 .menu__more {
   margin: 10px 5px 15px 15px;
@@ -867,7 +878,6 @@ template {
   text-overflow: ellipsis;
 }
 .menu__price {
-  display: block;
   margin: 0;
   font-weight: bold;
   padding-left: 10px;
@@ -875,31 +885,26 @@ template {
 }
 .menu .far {
   position: absolute;
-  left: 35px;
+  left: 20px;
   top: 25px;
   font-size: 1.5rem;
   color: white;
   opacity: 1;
 }
 .menu__check {
-  width: 23%;
-  height: 70px;
-  border-radius: 0 10px 10px 0;
   position: absolute;
-  overflow: hidden;
-  top: 0px;
-  left: 360px;
-}
-@media only screen and (max-width: 768px) {
-  .menu__check {
-    width: 23%;
-  }
-}
-.menu__check:hover {
   background-color: #99e2d0;
-  box-shadow: 2px 2px 7px #cac7c7;
-  animation: check 1s linear 1s 1 normal none;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 65px;
+  transform-origin: right 50%;
+  border-radius: 0px 20px 20px 0px;
+  transform: translateX(65px);
+  overflow: hidden;
+  transition-duration: 0.5s;
 }
+
 @keyframes menu {
   0% {
     opacity: 0;

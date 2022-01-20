@@ -70,9 +70,18 @@
   border-radius: 20px;
   box-shadow: $shadow-select;
   position: relative;
-  animation: menu 1s ease 0s 1 normal both;
-  .menu:hover ~ .menu__subtitle > .menu__check {
-    display: block;
+  overflow: hidden;
+
+  &:hover .menu__price {
+    transform: translateX(-80px);
+  }
+  &:hover .menu__check {
+    transform: translatex(0px);
+    transition: 0.5s ease-in-out;
+  }
+  &:hover .far.fa-check-circle {
+    transform: rotate(360deg);
+    transition: rotate 0.5s ease-in-out;
   }
 
   @include respond(desktop) {
@@ -102,8 +111,10 @@
   &__subtitle {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
-    cursor: pointer;
+    overflow: hidden;
+    width: 100%;
+    transform-origin: left 50%;
+    transition-duration: 0.5s;
   }
 
   &__more {
@@ -115,7 +126,6 @@
     text-overflow: ellipsis;
   }
   &__price {
-    display: block;
     margin: 0;
     font-weight: bold;
     padding-left: 10px;
@@ -124,40 +134,35 @@
 
   .far {
     position: absolute;
-    left: 35px;
+    left: 20px;
     top: 25px;
     font-size: 1.5rem;
     color: white;
     opacity: 1;
   }
   &__check {
-    width: 23%;
-    height: 70px;
-    border-radius: 0 10px 10px 0;
     position: absolute;
-    overflow: hidden;
-    top: 0px;
-    left: 360px;
-    @include respond(mobile) {
-      width: 23%;
-    }
-  }
-
-  &__check:hover {
     background-color: $color-tertiary;
-    box-shadow: $shadow-select;
-    animation: check 1s linear 1s 1 normal none;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 65px;
+    transform-origin: right 50%;
+    border-radius: 0px 20px 20px 0px;
+    transform: translateX(65px);
+    overflow: hidden;
+    transition-duration: 0.5s;
+  }
+}
+
+@keyframes menu {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
   }
 
-  @keyframes menu {
-    0% {
-      opacity: 0;
-      transform: translateY(50px);
-    }
-
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

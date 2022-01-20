@@ -59,9 +59,9 @@
   font-weight: $weight-subtitle;
   font-size: $size;
 }
-@mixin heart($bottom: 25px) {
+@mixin heart($bottom: 32px) {
   font-size: 1.5rem;
   position: absolute;
-  right: 25px;
+  right: 27px;
   bottom: $bottom;
 }
