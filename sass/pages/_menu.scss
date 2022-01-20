@@ -70,6 +70,10 @@
   border-radius: 20px;
   box-shadow: $shadow-select;
   position: relative;
+  animation: menu 1s ease 0s 1 normal both;
+  .menu:hover ~ .menu__subtitle > .menu__check {
+    display: block;
+  }
 
   @include respond(desktop) {
     width: 100%;
@@ -100,10 +104,6 @@
     justify-content: space-between;
     align-items: baseline;
     cursor: pointer;
-    /* position: relative;
-    overflow: hidden;*/
-    /*transition-property: transform;
-    transition-duration: 1000ms;*/
   }
 
   &__more {
@@ -120,10 +120,6 @@
     font-weight: bold;
     padding-left: 10px;
     width: 50px;
-    overflow: hidden;
-  }
-  &__price:hover {
-    animation: check 1s linear 1s 1 normal none;
   }
 
   .far {
@@ -147,13 +143,21 @@
     }
   }
 
-  &__check {
-    border-radius: 0 10px 10px 0;
-    overflow: hidden;
+  &__check:hover {
+    background-color: $color-tertiary;
+    box-shadow: $shadow-select;
+    animation: check 1s linear 1s 1 normal none;
   }
 
-  .menu__check:hover {
-    background-color: $color-tertiary;
-    animation: check 1s linear 1s 1 normal none;
+  @keyframes menu {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }

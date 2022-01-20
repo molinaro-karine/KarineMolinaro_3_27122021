@@ -62,17 +62,17 @@
   &__card {
     display: flex;
     align-items: center;
-    align-items: baseline;
     background: $color-grey;
     border-radius: 20px;
     margin: 10px 20px 10px 25px;
     box-shadow: $shadow-select;
 
-    @include respond(mobile) {
-      width: 88%;
-    }
     @include respond(desktop) {
       width: 88%;
+      height: 90px;
+    }
+    @include respond(mobile) {
+      height: 80px;
     }
 
     &:hover {

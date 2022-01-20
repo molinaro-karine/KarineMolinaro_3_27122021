@@ -592,20 +592,20 @@ template {
 .select__card {
   display: flex;
   align-items: center;
-  align-items: baseline;
   background: #f6f6f6;
   border-radius: 20px;
   margin: 10px 20px 10px 25px;
   box-shadow: 2px 2px 7px #cac7c7;
 }
-@media only screen and (max-width: 768px) {
-  .select__card {
-    width: 88%;
-  }
-}
 @media only screen and (max-width: 1440px) {
   .select__card {
     width: 88%;
+    height: 90px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .select__card {
+    height: 80px;
   }
 }
 .select__card:hover {
@@ -818,6 +818,10 @@ template {
   border-radius: 20px;
   box-shadow: 2px 2px 7px #cac7c7;
   position: relative;
+  animation: menu 1s ease 0s 1 normal both;
+}
+.menu .menu:hover ~ .menu__subtitle > .menu__check {
+  display: block;
 }
 @media only screen and (max-width: 1440px) {
   .menu {
@@ -853,10 +857,6 @@ template {
   justify-content: space-between;
   align-items: baseline;
   cursor: pointer;
-  /* position: relative;
-  overflow: hidden;*/
-  /*transition-property: transform;
-  transition-duration: 1000ms;*/
 }
 .menu__more {
   margin: 10px 5px 15px 15px;
@@ -872,10 +872,6 @@ template {
   font-weight: bold;
   padding-left: 10px;
   width: 50px;
-  overflow: hidden;
-}
-.menu__price:hover {
-  animation: check 1s linear 1s 1 normal none;
 }
 .menu .far {
   position: absolute;
@@ -899,13 +895,20 @@ template {
     width: 23%;
   }
 }
-.menu__check {
-  border-radius: 0 10px 10px 0;
-  overflow: hidden;
-}
-.menu .menu__check:hover {
+.menu__check:hover {
   background-color: #99e2d0;
+  box-shadow: 2px 2px 7px #cac7c7;
   animation: check 1s linear 1s 1 normal none;
+}
+@keyframes menu {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
