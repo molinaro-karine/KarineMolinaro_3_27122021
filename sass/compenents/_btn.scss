@@ -1,5 +1,7 @@
 .reserve__btn {
-  display: block;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   height: 50px;
   width: 220px;
   margin: 10px auto;

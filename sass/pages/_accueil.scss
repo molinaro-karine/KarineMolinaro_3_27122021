@@ -166,11 +166,11 @@
   .restaurant__heart:hover {
     .fas.fa-heart {
       opacity: 1;
-      transition: 0.3s ease-in-out;
+      transition: 0.3s linear;
     }
     .far.fa-heart {
       opacity: 0;
-      transition: 0.3s ease-in-out;
+      transition: 0.3s linear;
     }
   }
   .fas.fa-heart {
