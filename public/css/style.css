@@ -428,6 +428,9 @@ template {
   }
 }
 .reserve__btn {
+  padding: 0px 0 20px 0;
+}
+.reserve__btn--btn {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -442,10 +445,10 @@ template {
   border: none;
   z-index: 1;
 }
-.reserve__btn:hover::after {
+.reserve__btn--btn:hover::after {
   opacity: 1;
 }
-.reserve__btn::after {
+.reserve__btn--btn::after {
   content: "";
   position: absolute;
   top: 0;
@@ -769,13 +772,22 @@ template {
   padding-top: 30px;
   margin-bottom: 30px;
 }
+.menu__restaurant .menu__text {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 35px 0px 8px 20px;
+  border-bottom: 3px solid #99e2d0;
+  width: 40px;
+  height: 30px;
+}
 .menu__restaurant .restaurant__heart:hover .fas.fa-heart {
   opacity: 1;
-  transition: 1s ease-in-out;
+  transition: 0.5s linear;
 }
 .menu__restaurant .restaurant__heart:hover .far.fa-heart {
   opacity: 0;
-  transition: 1s ease-in-out;
+  transition: 0.5s linear;
 }
 .menu__restaurant .fas.fa-heart {
   font-size: 1.5rem;
@@ -799,119 +811,121 @@ template {
 .menu__bloc {
   display: flex;
   flex-direction: column;
-  padding-bottom: 25px;
+  gap: 15px;
 }
 @media only screen and (max-width: 1440px) {
   .menu__bloc {
     display: flex;
     flex-direction: row;
+    margin: 10px 20px;
   }
 }
 @media only screen and (max-width: 992px) {
   .menu__bloc {
-    width: 100%;
     flex-wrap: wrap;
     justify-content: center;
+    margin: auto;
   }
 }
 
-.menu {
-  margin: 10px;
+.menus {
+  display: flex;
+  width: 95%;
+  margin: auto;
+  overflow: hidden;
+  cursor: pointer;
   background: white;
   border-radius: 20px;
   box-shadow: 2px 2px 7px #cac7c7;
-  position: relative;
-  overflow: hidden;
 }
-.menu:hover .menu__price {
-  transform: translatex(-60px);
-  transition: 0.5s ease-in-out;
+.menus:hover > .box {
+  width: 5em;
 }
-.menu:hover .menu__check {
-  transform: translatex(0px);
-  transition: 0.5s ease-in-out;
+.menus:hover > .box .check {
+  transform: rotate(0deg);
 }
-.menu:hover .far.fa-check-circle {
-  transform: rotate(360deg);
-  transition: rotate 0.5s ease-in-out;
+.menus .menu__name {
+  flex-grow: 1;
+  width: 10em;
+  background: #fff;
+  margin: 5px 15px;
 }
-@media only screen and (max-width: 1440px) {
-  .menu {
-    width: 100%;
-  }
-}
-@media only screen and (max-width: 992px) {
-  .menu {
-    width: 28%;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .menu {
-    width: 98%;
-  }
-}
-.menu__text {
-  text-transform: uppercase;
-  font-size: 1rem;
-  font-weight: normal;
-  margin: 35px 0px 8px 20px;
-  border-bottom: 3px solid #99e2d0;
-  width: 40px;
-  height: 30px;
-}
-.menu__meal {
-  margin: 15px 15px 0 15px;
+.menus .menu__meal {
+  margin: 18px 0 5px 0;
   font-weight: bold;
-  font-size: 1rem;
-}
-.menu__subtitle {
-  display: flex;
-  justify-content: space-between;
+  font-size: 1.2rem;
   overflow: hidden;
-  width: 100%;
-  align-items: center;
-  transform-origin: left 50%;
-  transition-duration: 0.5s;
-  transition: margin-right 2s;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-.menu__more {
-  margin: 10px 5px 15px 15px;
+.menus .menu__more {
+  margin: 5px 5px 15px 0;
   font-weight: normal;
   font-size: 1rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu__price {
-  margin: 0;
-  font-weight: bold;
-  padding-left: 10px;
-  width: 50px;
-  transition-duration: 0.5s;
+.menus .menu__price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding-left: 40px;
+  margin: 21px;
 }
-.menu .far {
-  position: absolute;
-  left: 20px;
-  top: 25px;
+.menus .box {
+  display: flex;
+  width: 0;
+  background: #99e2d0;
+  transition: all 1s;
+}
+.menus .box .check {
+  margin: auto;
+  /*border: -1px solid #fff;*/
+  border-radius: 50%;
+  color: #fff;
+  transition: transform 1s;
+  transform: rotate(180deg);
+  background-color: #99e2d0;
+  font-size: 1.5rem;
+}
+.menus .boxfar {
   font-size: 1.5rem;
   color: white;
   opacity: 1;
 }
-.menu__check {
-  position: absolute;
-  background-color: #99e2d0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 65px;
-  transform-origin: right 50%;
-  border-radius: 0px 20px 20px 0px;
-  transform: translateX(65px);
-  overflow: hidden;
-  transition-duration: 0.5s;
+
+.reserve__btn {
+  margin: 45px 0 20px 0;
+  padding: 0;
 }
 
-@keyframes menu {
+.menu :nth-child(1) {
+  animation: slideDown 1s;
+}
+
+.menu :nth-child(2) {
+  animation: slideDown 1s;
+}
+
+.menu :nth-child(3) {
+  animation: slideDown 1s;
+}
+
+.menu :nth-child(4) {
+  animation: slideDown 10s;
+}
+
+.menu__bloc :nth-child(5) {
+  animation: slideDown 10s;
+}
+
+.menu__bloc :nth-child(6) {
+  animation: slideDown 10s;
+}
+
+@keyframes slideDown {
   0% {
     opacity: 0;
     transform: translateY(50px);

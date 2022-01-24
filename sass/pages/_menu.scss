@@ -18,14 +18,23 @@
     padding-top: 30px;
     margin-bottom: 30px;
   }
+  .menu__text {
+    text-transform: uppercase;
+    font-size: $size-subtitle;
+    font-weight: $weight-subtitle;
+    margin: 35px 0px 8px 20px;
+    border-bottom: 3px solid $color-tertiary;
+    width: 40px;
+    height: 30px;
+  }
   .restaurant__heart:hover {
     .fas.fa-heart {
       opacity: 1;
-      transition: 1s ease-in-out;
+      transition: 0.5s linear;
     }
     .far.fa-heart {
       opacity: 0;
-      transition: 1s ease-in-out;
+      transition: 0.5s linear;
     }
   }
   .fas.fa-heart {
@@ -51,115 +60,118 @@
 .menu__bloc {
   display: flex;
   flex-direction: column;
-  padding-bottom: 25px;
 
+  gap: 15px;
   @include respond(desktop) {
     display: flex;
     flex-direction: row;
+    margin: 10px 20px;
   }
-
   @include respond(tablet) {
-    width: 100%;
     flex-wrap: wrap;
     justify-content: center;
+    margin: auto;
   }
 }
-.menu {
-  margin: 10px;
+.menus {
+  display: flex;
+  width: 95%;
+
+  margin: auto;
+  overflow: hidden;
+  cursor: pointer;
   background: $color-white;
   border-radius: 20px;
   box-shadow: $shadow-select;
-  position: relative;
-  overflow: hidden;
 
-  &:hover .menu__price {
-    transform: translatex(-60px);
-    transition: 0.5s ease-in-out;
-  }
-  &:hover .menu__check {
-    transform: translatex(0px);
-    transition: 0.5s ease-in-out;
-  }
-  &:hover .far.fa-check-circle {
-    transform: rotate(360deg);
-    transition: rotate 0.5s ease-in-out;
+  &:hover > .box {
+    width: 5em;
+    .check {
+      transform: rotate(0deg);
+    }
   }
 
-  @include respond(desktop) {
-    width: 100%;
+  .menu__name {
+    flex-grow: 1;
+    width: 10em;
+    background: #fff;
+    margin: 5px 15px;
   }
-  @include respond(tablet) {
-    width: 28%;
-  }
-  @include respond(mobile) {
-    width: 98%;
-  }
-  &__text {
-    text-transform: uppercase;
-    font-size: $size-subtitle;
-    font-weight: $weight-subtitle;
-    margin: 35px 0px 8px 20px;
-    border-bottom: 3px solid $color-tertiary;
-    width: 40px;
-    height: 30px;
-  }
-
-  &__meal {
-    margin: 15px 15px 0 15px;
+  .menu__meal {
+    margin: 18px 0 5px 0;
     font-weight: bold;
-    font-size: 1rem;
-  }
-  &__subtitle {
-    display: flex;
-    justify-content: space-between;
+    font-size: 1.2rem;
     overflow: hidden;
-    width: 100%;
-    align-items: center;
-    transform-origin: left 50%;
-    transition-duration: 0.5s;
-    transition: margin-right 2s;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
-
-  &__more {
-    margin: 10px 5px 15px 15px;
+  .menu__more {
+    margin: 5px 5px 15px 0;
     font-weight: $weight-subtitle;
     font-size: $size-subtitle;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  &__price {
-    margin: 0;
-    font-weight: bold;
-    padding-left: 10px;
-    width: 50px;
-    transition-duration: 0.5s;
-  }
 
-  .far {
-    position: absolute;
-    left: 20px;
-    top: 25px;
-    font-size: 1.5rem;
-    color: white;
-    opacity: 1;
+  .menu__price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding-left: 40px;
+    margin: 21px;
   }
-  &__check {
-    position: absolute;
-    background-color: $color-tertiary;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: 65px;
-    transform-origin: right 50%;
-    border-radius: 0px 20px 20px 0px;
-    transform: translateX(65px);
-    overflow: hidden;
-    transition-duration: 0.5s;
+  .box {
+    display: flex;
+    width: 0;
+    background: $color-tertiary;
+    transition: all 1s;
+
+    .check {
+      margin: auto;
+      /*border: -1px solid #fff;*/
+      border-radius: 50%;
+      color: #fff;
+      transition: transform 1s;
+      transform: rotate(180deg);
+      background-color: #99e2d0;
+      font-size: 1.5rem;
+    }
+    &far {
+      font-size: 1.5rem;
+      color: white;
+      opacity: 1;
+    }
   }
 }
+.reserve__btn {
+  margin: 45px 0 20px 0;
+  padding: 0;
+}
 
-@keyframes menu {
+.menu :nth-child(1) {
+  animation: slideDown 1s;
+}
+.menu :nth-child(2) {
+  animation: slideDown 1s;
+}
+.menu :nth-child(3) {
+  animation: slideDown 1s;
+}
+.menu :nth-child(4) {
+  animation: slideDown 10s;
+}
+
+.menu__bloc :nth-child(5) {
+  animation: slideDown 10s;
+}
+
+.menu__bloc :nth-child(6) {
+  animation: slideDown 10s;
+}
+
+@keyframes slideDown {
   0% {
     opacity: 0;
     transform: translateY(50px);

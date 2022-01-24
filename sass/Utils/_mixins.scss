@@ -32,7 +32,7 @@
   font-weight: $weight;
   font-size: $size;
 }
-//cards restaurants
+//New on cards restaurants
 @mixin newcard {
   position: absolute;
   right: 15px;
@@ -54,7 +54,7 @@
   font-size: $size-subtitle;
 }
 
-@mixin sous-title($size: $size-subtitle) {
+@mixin subtitle($size: $size-subtitle) {
   margin: 0px 0px 0px 15px;
   font-weight: $weight-subtitle;
   font-size: $size;

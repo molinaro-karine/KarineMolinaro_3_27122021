@@ -1,30 +1,34 @@
 .reserve__btn {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 50px;
-  width: 220px;
-  margin: 10px auto;
-  border-radius: 30px;
-  background: $gradient-btn;
-  box-shadow: $shadow;
-  position: relative;
-  color: $color-white;
-  border: none;
-  z-index: 1;
+  padding: 0px 0 20px 0;
 
-  &:hover {
-    &::after {
-      opacity: 1;
-    }
-  }
-  &::after {
-    @include pseudo;
+  &--btn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    width: 220px;
+    margin: 10px auto;
     border-radius: 30px;
-    background-color: lighten($gradient-hover, 0.5);
-    box-shadow: $shadow-light;
-    opacity: 0;
-    z-index: -1;
-    transition: opacity 250ms;
+    background: $gradient-btn;
+    box-shadow: $shadow;
+    position: relative;
+    color: $color-white;
+    border: none;
+    z-index: 1;
+
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+    }
+    &::after {
+      @include pseudo;
+      border-radius: 30px;
+      background-color: lighten($gradient-hover, 0.5);
+      box-shadow: $shadow-light;
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 250ms;
+    }
   }
 }
