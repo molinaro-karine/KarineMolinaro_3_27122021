@@ -576,7 +576,7 @@ template {
   flex-direction: column;
   justify-content: space-around;
 }
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-width: 1024px) {
   .select {
     flex-direction: row;
     align-items: baseline;
@@ -602,7 +602,7 @@ template {
   margin: 10px 20px 10px 25px;
   box-shadow: 2px 2px 7px #cac7c7;
 }
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-width: 1024px) {
   .select__card {
     width: 88%;
     height: 90px;
@@ -643,7 +643,7 @@ template {
   margin: 0;
   font-weight: 500;
 }
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-width: 1024px) {
   .select__text {
     margin-left: 10px;
   }
@@ -659,7 +659,7 @@ template {
   flex-direction: column;
   justify-content: space-around;
 }
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-width: 1024px) {
   .restaurants__container {
     flex-direction: row;
     flex-wrap: wrap;
@@ -677,7 +677,7 @@ template {
   margin: 20px;
   box-shadow: 2px 2px 7px #cac7c7;
 }
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-width: 1024px) {
   .restaurant {
     width: 40%;
   }
@@ -813,7 +813,7 @@ template {
   flex-direction: column;
   gap: 15px;
 }
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-width: 1024px) {
   .menu__bloc {
     display: flex;
     flex-direction: row;
@@ -849,6 +849,11 @@ template {
   width: 10em;
   background: #fff;
   margin: 5px 15px;
+}
+@media only screen and (max-width: 1024px) {
+  .menus .menu__name {
+    width: 4em;
+  }
 }
 .menus .menu__meal {
   margin: 18px 0 5px 0;

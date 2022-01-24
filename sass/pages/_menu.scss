@@ -60,7 +60,6 @@
 .menu__bloc {
   display: flex;
   flex-direction: column;
-
   gap: 15px;
   @include respond(desktop) {
     display: flex;
@@ -96,6 +95,10 @@
     width: 10em;
     background: #fff;
     margin: 5px 15px;
+
+    @include respond(desktop) {
+      width: 4em;
+    }
   }
   .menu__meal {
     margin: 18px 0 5px 0;
