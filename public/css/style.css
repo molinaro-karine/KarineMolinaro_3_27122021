@@ -381,7 +381,7 @@ template {
   font-weight: bold;
   position: fixed;
   z-index: 4;
-  animation: off 3s 2s both;
+  animation: off 0s 0s both;
   transition: opacity 3s ease-in-out;
 }
 .loader__spin {
@@ -842,11 +842,11 @@ template {
 }
 .menu__restaurant .restaurant__heart:hover .fas.fa-heart {
   opacity: 1;
-  transition: 0.5s linear;
+  transition: all 0.5s ease;
 }
 .menu__restaurant .restaurant__heart:hover .far.fa-heart {
   opacity: 0;
-  transition: 0.5s linear;
+  transition: all 0.5s ease;
 }
 .menu__restaurant .fas.fa-heart {
   font-size: 1.5rem;
@@ -901,6 +901,8 @@ template {
 
 .menus {
   display: flex;
+  height: 5em;
+  align-items: center;
   width: 95%;
   margin: auto;
   overflow: hidden;
@@ -950,11 +952,13 @@ template {
   align-items: flex-end;
   font-weight: bold;
   padding-left: 40px;
-  margin: 21px;
+  margin: 30px 20px 0 0;
+  /*margin: 21px;*/
 }
 .menus .box {
   display: flex;
   width: 0;
+  height: 100%;
   background: #99e2d0;
   transition: all 1s;
 }
