@@ -409,24 +409,7 @@ template {
   border-right-color: #ff79da;
   animation: spiner 1s linear infinite;
 }
-@keyframes spiner {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 
-@keyframes off {
-  from {
-    opacity: 100%;
-  }
-  to {
-    opacity: 0%;
-    z-index: -1;
-  }
-}
 /*BUTTON*/
 .reserve__btn {
   padding: 0px 0 20px 0;
@@ -464,6 +447,51 @@ template {
   transition: opacity 250ms;
 }
 
+/*ANIMATION LOADER*/
+@keyframes spiner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes off {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0%;
+    z-index: -1;
+  }
+}
+/*ANIMATIONS MENUS*/
+.menu__text {
+  animation: slideDown 1s;
+}
+
+.menus:nth-child(1) {
+  animation: slideDown 1s;
+}
+
+.menus:nth-child(2) {
+  animation: slideDown 1.5s;
+}
+
+.menus:nth-child(3) {
+  animation: slideDown 2s;
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /*HEADER*/
 .header-logo {
   position: sticky;
@@ -585,6 +613,15 @@ template {
   flex-direction: column;
   justify-content: space-around;
 }
+@media only screen and (max-width: 1920px) {
+  .select {
+    flex-direction: row;
+    align-items: baseline;
+  }
+  .select__card {
+    width: 100%;
+  }
+}
 @media only screen and (max-width: 1440px) {
   .select {
     flex-direction: row;
@@ -658,7 +695,6 @@ template {
   }
 }
 
-/*SECTION RESTAURANT*/
 .restaurants {
   background-color: #f6f6f6;
   padding-top: 20px;
@@ -675,6 +711,12 @@ template {
     flex-wrap: wrap;
   }
 }
+@media only screen and (max-width: 1920px) {
+  .restaurants__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
 .restaurants__title {
   margin: 10px 0 0 22px;
 }
@@ -686,6 +728,11 @@ template {
   border-radius: 20px;
   margin: 20px;
   box-shadow: 2px 2px 7px #cac7c7;
+}
+@media only screen and (max-width: 1920px) {
+  .restaurant {
+    width: 40%;
+  }
 }
 @media only screen and (max-width: 1440px) {
   .restaurant {
@@ -791,7 +838,7 @@ template {
   border-bottom: 3px solid #99e2d0;
   width: 40px;
   height: 25px;
-  animation: slideDown 3s;
+  animation: slideDown 0.5s;
 }
 .menu__restaurant .restaurant__heart:hover .fas.fa-heart {
   opacity: 1;
@@ -829,6 +876,13 @@ template {
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+@media only screen and (max-width: 1920px) {
+  .menu__bloc {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 20px;
+  }
 }
 @media only screen and (max-width: 1440px) {
   .menu__bloc {
@@ -906,37 +960,12 @@ template {
 }
 .menus .box .check {
   margin: auto;
-  /*border: -1px solid #fff;*/
   border-radius: 50%;
   color: #fff;
   transition: transform 1s;
   transform: rotate(180deg);
   background-color: #99e2d0;
   font-size: 1.5rem;
-}
-.menus .boxfar {
-  font-size: 1.5rem;
-  color: white;
-  opacity: 1;
-}
-
-.menu:nth-child(1) {
-  animation: slideDown 5s;
-}
-
-.menu:nth-child(2) {
-  animation: slideDown 10s;
-}
-
-@keyframes slideDown {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

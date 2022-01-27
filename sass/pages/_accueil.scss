@@ -50,6 +50,14 @@
   flex-direction: column;
   justify-content: space-around;
 
+  @include respond(large) {
+    flex-direction: row;
+    align-items: baseline;
+    &__card {
+      width: 100%;
+    }
+  }
+
   @include respond(desktop) {
     flex-direction: row;
     align-items: baseline;
@@ -118,7 +126,7 @@
     }
   }
 }
-/*SECTION RESTAURANT*/
+//*SECTION RESTAURANT
 .restaurants {
   background-color: $color-grey;
   padding-top: 20px;
@@ -130,6 +138,10 @@
     justify-content: space-around;
     //BREAKPOINT
     @include respond(desktop) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    @include respond(large) {
       flex-direction: row;
       flex-wrap: wrap;
     }
@@ -146,6 +158,10 @@
   border-radius: 20px;
   margin: 20px;
   box-shadow: $shadow-select;
+
+  @include respond(large) {
+    width: 40%;
+  }
 
   @include respond(desktop) {
     width: 40%;
