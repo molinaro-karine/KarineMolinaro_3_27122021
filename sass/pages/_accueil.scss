@@ -184,7 +184,7 @@
     object-fit: cover;
   }
 
-  .restaurant__heart:hover {
+  &__heart:hover {
     .fas.fa-heart {
       opacity: 1;
       transition: 0.3s linear;

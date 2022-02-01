@@ -17,6 +17,19 @@
     margin: 20px;
     padding-top: 30px;
     margin-bottom: 30px;
+
+    &far.fa-heart {
+      font-size: 1.5rem;
+      position: absolute;
+      right: 25px;
+      top: 30px;
+      opacity: 1;
+    }
+
+    &far.fa-heart {
+      opacity: 0;
+      transition: all 0.5s ease;
+    }
   }
 
   .menu__text {
@@ -32,11 +45,11 @@
   .restaurant__heart:hover {
     .fas.fa-heart {
       opacity: 1;
-      transition: all 0.5s ease;
+      transition: 0.3s linear;
     }
     .far.fa-heart {
       opacity: 0;
-      transition: all 0.5s ease;
+      transition: 0.3s linear;
     }
   }
   .fas.fa-heart {
@@ -86,8 +99,8 @@
 }
 .menus {
   display: flex;
-  height: 5em; //verifier
-  align-items: center; //verifier
+  height: 5em;
+  align-items: center;
   width: 95%;
   margin: auto;
   overflow: hidden;
@@ -138,12 +151,11 @@
     font-weight: $weight-title;
     padding-left: 40px;
     margin: 30px 20px 0 0;
-    /*margin: 21px;*/
   }
   .box {
     display: flex;
     width: 0;
-    height: 100%; //verifier
+    height: 100%;
     background: $color-tertiary;
     transition: all 1s;
 
