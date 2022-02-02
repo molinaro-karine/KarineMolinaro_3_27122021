@@ -17,37 +17,14 @@
     margin: 20px;
     padding-top: 30px;
     margin-bottom: 30px;
-
-    &far.fa-heart {
-      font-size: 1.5rem;
-      position: absolute;
-      right: 25px;
-      top: 30px;
-      opacity: 1;
-    }
-
-    &far.fa-heart {
-      opacity: 0;
-      transition: all 0.5s ease;
-    }
   }
 
-  .menu__text {
-    text-transform: uppercase;
-    font-size: $size-subtitle;
-    font-weight: $weight-subtitle;
-    margin: 35px 0px 12px 20px;
-    border-bottom: 3px solid $color-tertiary;
-    width: 40px;
-    height: 25px;
-    animation: slideDown 0.5s;
-  }
-  .restaurant__heart:hover {
+  &__heart:hover {
     .fas.fa-heart {
       opacity: 1;
       transition: 0.3s linear;
     }
-    .far.fa-heart {
+    &far.fa-heart {
       opacity: 0;
       transition: 0.3s linear;
     }
@@ -71,6 +48,17 @@
     opacity: 1;
   }
 }
+.menu__text {
+  text-transform: uppercase;
+  font-size: $size-subtitle;
+  font-weight: $weight-subtitle;
+  margin: 35px 0px 12px 20px;
+  border-bottom: 3px solid $color-tertiary;
+  width: 40px;
+  height: 25px;
+  animation: slideDown 0.5s; //verifier
+}
+
 .reserve__btn {
   margin-top: 50px;
 }
