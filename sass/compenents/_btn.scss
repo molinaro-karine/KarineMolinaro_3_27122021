@@ -24,13 +24,18 @@
       }
     }
     &::after {
-      @include pseudo;
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
       border-radius: 30px;
       background-color: lighten($gradient-hover, 0.5);
       box-shadow: $shadow-light;
       opacity: 0;
       z-index: -1;
-      transition: opacity 250ms;
+      transition: opacity 0.5s;
     }
   }
 }

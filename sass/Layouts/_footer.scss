@@ -21,9 +21,17 @@
     }
   }
   &__link {
-    @include link-text($color: white, $weight: $weight-subtitle, $size: 1rem);
+    @include link-text(
+      $color: $color-white,
+      $weight: $weight-subtitle,
+      $size: 1rem
+    );
   }
   &__linkregular {
-    @include link-text($color: white, $weight: $weight-thin, $size: 1rem);
+    @include link-text(
+      $color: $color-white,
+      $weight: $weight-thin,
+      $size: 1rem
+    );
   }
 }

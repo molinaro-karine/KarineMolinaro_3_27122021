@@ -22,15 +22,6 @@
     }
   }
 }
-//pseudoelement
-@mixin pseudo {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
 
 @mixin link-text($color: black, $weight: $weight-title, $size: $size-subtitle) {
   text-decoration: none;

@@ -444,7 +444,7 @@ template {
   box-shadow: 4px 2px 7px #555252;
   opacity: 0;
   z-index: -1;
-  transition: opacity 250ms;
+  transition: opacity 0.5s;
 }
 
 /*ANIMATION LOADER*/
@@ -832,10 +832,6 @@ template {
 }
 .menu__restaurant__heart:hover .fas.fa-heart {
   opacity: 1;
-  transition: 0.3s linear;
-}
-.menu__restaurant__heart:hoverfar.fa-heart {
-  opacity: 0;
   transition: 0.3s linear;
 }
 .menu__restaurant .fas.fa-heart {
