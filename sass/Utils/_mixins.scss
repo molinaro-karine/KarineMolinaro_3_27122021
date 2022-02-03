@@ -25,6 +25,7 @@
 
 @mixin link-text($color: black, $weight: $weight-title, $size: $size-subtitle) {
   text-decoration: none;
+  color: $color;
   font-weight: $weight;
   font-size: $size;
 }
